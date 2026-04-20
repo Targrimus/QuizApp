@@ -1,0 +1,1106 @@
+{
+  "sorular": [
+    {
+      "id": 1,
+      "soru": "Doğal gaz dağıtım lisansı kim tarafından verilir?",
+      "secenekler": {
+        "A": "Kurul (EPDK)",
+        "B": "Bakanlık",
+        "C": "BOTAŞ",
+        "D": "Belediyeler"
+      }
+    },
+    {
+      "id": 2,
+      "soru": "Şehir içi doğal gaz dağıtım hizmeti lisans süresi ne kadardır?",
+      "secenekler": {
+        "A": "Sabit 10 yıl",
+        "B": "Kurum tarafından ihalede belirlenen süre",
+        "C": "Sabit 30 yıl",
+        "D": "Şirketin talebine bağlı süre"
+      }
+    },
+    {
+      "id": 3,
+      "soru": "Kanuna göre dağıtım lisansı sahibi, yetki aldığı şehirde belediye veya belediye şirketini en fazla yüzde kaç oranında dağıtım şirketine ortak olmaya davet etmek zorundadır?",
+      "secenekler": {
+        "A": "%10",
+        "B": "%15",
+        "C": "%20",
+        "D": "%25"
+      }
+    },
+    {
+      "id": 4,
+      "soru": "Dağıtım şirketleri, boru hatlarının ulaşmadığı bölgelerde hangi yakıtlarla besleme yöntemiyle doğal gaz dağıtım faaliyetinde bulunabilir?",
+      "secenekler": {
+        "A": "Yalnızca LPG",
+        "B": "LPG ve CNG",
+        "C": "LNG veya CNG",
+        "D": "Odun ve kömür"
+      }
+    },
+    {
+      "id": 5,
+      "soru": "Dağıtım şirketleri doğrudan yetkili olduğu dağıtım bölgesinde şebeke yatırımı ve dağıtımı faaliyetleri yapmanın yanında LNG veya CNG'nin ne tür bir faaliyetini yapamaz?",
+      "secenekler": {
+        "A": "Taşıma faaliyeti",
+        "B": "Doğrudan satışı",
+        "C": "Depolama",
+        "D": "Hiçbiri"
+      }
+    },
+    {
+      "id": 6,
+      "soru": "Dağıtım şirketleri, konut ve sanayi dahil tüketicilerin tesisatlarını kime kontrol ettirebilir?",
+      "secenekler": {
+        "A": "Sadece Kamu kurumlarına",
+        "B": "Yalnızca BOTAŞ'a",
+        "C": "Kendi personeline veya denetim şirketlerine",
+        "D": "Üniversitelere"
+      }
+    },
+    {
+      "id": 7,
+      "soru": "Dağıtım şirketleri, yurt çapında kural olarak en fazla kaç şehirde lisans sahibi olabilir?",
+      "secenekler": {
+        "A": "Bir",
+        "B": "İki",
+        "C": "Beş",
+        "D": "Sınır yoktur"
+      }
+    },
+    {
+      "id": 8,
+      "soru": "Organize sanayi bölgelerinde şebeke ve bağlantı hattı yatırımları yapılarak dağıtım faaliyeti gerçekleştirilmesine dair koşulları belirleyen usul ve esaslar kimin tarafından belirlenir?",
+      "secenekler": {
+        "A": "Tarım Bakanlığı",
+        "B": "Sanayi Odaları",
+        "C": "Kurul (EPDK)",
+        "D": "Belediye Encümeni"
+      }
+    },
+    {
+      "id": 9,
+      "soru": "İmar Kanunu kapsamında yapı kayıt belgesi alan ama imar planı bulunmayan bölgelere doğal gaz verilmesi için belediyenin ne tür bir taahhüdü aranır?",
+      "secenekler": {
+        "A": "Bedelsiz bakım onarım yapma",
+        "B": "10 yıl içinde deplase edilirse maliyetini üstlenme",
+        "C": "Vergi muafiyeti sağlama",
+        "D": "Şirkete ek süre verme"
+      }
+    },
+    {
+      "id": 10,
+      "soru": "Genişleme bölgelerinde yerleşim yeri belediyesi yatırım talep ettiğinde, altyapı kazı alanının üst kaplamaları (asfalt vb.) kim tarafından yapılır?",
+      "secenekler": {
+        "A": "Dağıtım şirketi",
+        "B": "İlgili Belediye",
+        "C": "Kurum",
+        "D": "BOTAŞ"
+      }
+    },
+    {
+      "id": 11,
+      "soru": "Doğal gazın perakende satış tarifesi kim tarafından belirlenir?",
+      "secenekler": {
+        "A": "Dağıtım şirketi",
+        "B": "Kurul (EPDK)",
+        "C": "Maliye Bakanlığı",
+        "D": "İthalatçı Şirket"
+      }
+    },
+    {
+      "id": 12,
+      "soru": "Dağıtım şirketinin birim doğal gaz alım fiyatı, birim hizmet bedeli ve amortismanlardan oluşan tarife sisteminin üst sınırı olarak kabul edilen tarife hangisidir?",
+      "secenekler": {
+        "A": "Perakende Satış Fiyatı",
+        "B": "Depolama Tarifesi",
+        "C": "Bağlantı Tarifesi",
+        "D": "Toptan Satış Fiyatı"
+      }
+    },
+    {
+      "id": 13,
+      "soru": "Lisansta ve abone bağlantı anlaşmalarında, kullanıcılara eşit durumda olanlar arasında ne gözetilmeyeceğine dair hükümler yer alması mecburidir?",
+      "secenekler": {
+        "A": "Ayrım gözetilmeyeceği",
+        "B": "Ticari öncelik yapılacağı",
+        "C": "Cinsiyet ayrımı",
+        "D": "Hız önceliği"
+      }
+    },
+    {
+      "id": 14,
+      "soru": "Bir tüzel kişi dağıtım alanında lisans almak için anonim şirket şeklinde kurulmuş ise hisselerinin nev'i ne olmalıdır?",
+      "secenekler": {
+        "A": "Hamiline yazılı",
+        "B": "Nama yazılı",
+        "C": "Halka açık",
+        "D": "Karma"
+      }
+    },
+    {
+      "id": 15,
+      "soru": "Tüketici tarafından iç tesisatta yapılacak izinsiz tadilat ve bozuk ekipman kullanılmasından kim sorumludur?",
+      "secenekler": {
+        "A": "Dağıtım şirketi",
+        "B": "Tüketici",
+        "C": "Kurum",
+        "D": "BOTAŞ"
+      }
+    },
+    {
+      "id": 16,
+      "soru": "Mevcut şebekenin satışı ihtimalinde, şebeke değerini tahsil edip eski lisans sahibine kim öder?",
+      "secenekler": {
+        "A": "Bankalar",
+        "B": "Hazine",
+        "C": "Kurum (EPDK)",
+        "D": "Yeni şirket"
+      }
+    },
+    {
+      "id": 17,
+      "soru": "Kurum, dağıtım ağının mülkiyetine sahip olan şirketin işletimini uygun görmezse, masraflarını şirketten tahsil etmek kaydıyla işletmeyi kime yaptırabilir?",
+      "secenekler": {
+        "A": "İlgili Valiliğe",
+        "B": "BOTAŞ'a",
+        "C": "Sertifika sahibi diğer şirketlere",
+        "D": "Güvenlik güçlerine"
+      }
+    },
+    {
+      "id": 18,
+      "soru": "Kurulun bir şirket için dağıtım lisansını yenileme kararı alırken dikkate alacağı en önemli unsurlardan biri nedir?",
+      "secenekler": {
+        "A": "Şirketin ithalat kapasitesi",
+        "B": "Abonelerin memnuniyeti ve hizmet kalitesi",
+        "C": "Şirketin döviz rezervi",
+        "D": "Banka kredileri durumu"
+      }
+    },
+    {
+      "id": 19,
+      "soru": "Serbest tüketici tanımında, elektrik üretimi için gaz satın alan tesisler serbest tüketici midir?",
+      "secenekler": {
+        "A": "Evet, tüketim miktarına bakılmaksızın",
+        "B": "Sadece 10 milyon metreküp üzeri ise",
+        "C": "Hayır, serbest tüketici sayılamazlar",
+        "D": "Sadece kış aylarında"
+      }
+    },
+    {
+      "id": 20,
+      "soru": "Doğal gaz dağıtım lisansı süresi biten şirketten dağıtım ağını devralma süreci nasıl yürütülür?",
+      "secenekler": {
+        "A": "Orijinal sahibine otomatik devredilir",
+        "B": "Yeni baştan ihale açılır",
+        "C": "Valiliğe devredilir",
+        "D": "Şebeke sökülür"
+      }
+    },
+    {
+      "id": 21,
+      "soru": "Dağıtım lisansı sahipleri, müşterilere uygulayacakları satış fiyatlarına serbestçe ek bedeller yansıtabilirler mi?",
+      "secenekler": {
+        "A": "Evet yansıtabilirler",
+        "B": "Sadece Kurum onaylı bedeller harici ad altında ücret yansıtılamaz",
+        "C": "Sınırsız danışmanlık ücreti adıyla alabilirler",
+        "D": "Belediye izniyle ek aidat eklenebilir"
+      }
+    },
+    {
+      "id": 22,
+      "soru": "Doğal gaz şehir içi dağıtım faaliyeti ile birlikte, bir şirket başka hangi faaliyetlerde bulunabilir?",
+      "secenekler": {
+        "A": "LPG ithalatı yapabilir",
+        "B": "Elektrik perakende satışı yapabilir",
+        "C": "Ana faaliyeti dışında, sadece bir başka piyasa faaliyeti yapan şirkete iştirak edebilir",
+        "D": "Türkiye'deki her türlü şirkete ortaklık edebilir"
+      }
+    },
+    {
+      "id": 23,
+      "soru": "Dağıtım şirketlerinin kendi sorumluluk alanı dışındaki müşterilere gaz tedariki yapma zorunluluğu var mıdır?",
+      "secenekler": {
+        "A": "Evet, her zaman",
+        "B": "Hayır, yoktur",
+        "C": "Sadece yaz aylarında zorunludur",
+        "D": "Eğer BOTAŞ onaylarsa"
+      }
+    },
+    {
+      "id": 24,
+      "soru": "Doğal gaz şirketlerine uygulanmış olan bir idari para cezası maliyet olarak tarifeye yansıtılabilir mi?",
+      "secenekler": {
+        "A": "Kesinlikle yansıtılamaz",
+        "B": "Kısmi olarak yansıtılır",
+        "C": "Sadece sanayi müşterilerine yansıtılır",
+        "D": "Her zaman yansıtılır"
+      }
+    },
+    {
+      "id": 25,
+      "soru": "İç tesisatların kontrolü için sertifika almış olan şirketleri görev esnasında kim denetler?",
+      "secenekler": {
+        "A": "İthalatçı Şirket",
+        "B": "Belediye Fen İşleri",
+        "C": "Dağıtım Şirketi",
+        "D": "Bankalar"
+      }
+    },
+    {
+      "id": 26,
+      "soru": "Tarifelerin düzenlenmesinde aşağıdaki ilkelerden hangisi esas alınmaz?",
+      "secenekler": {
+        "A": "Mali sürdürülebilirlik",
+        "B": "Çapraz sübvansiyon yapılması",
+        "C": "Eşit taraflar arasında ayrım yapılmaması",
+        "D": "Şeffaflık"
+      }
+    },
+    {
+      "id": 27,
+      "soru": "Dağıtım şirketinin bölgesi dışındaki müşterilere Kurul izniyle yaptığı bağlantılarda bağlantı bedeli nasıl belirlenir?",
+      "secenekler": {
+        "A": "Kurul tarafından belirlenen sabit tarife ile",
+        "B": "İlgili taraflar arasında serbestçe",
+        "C": "İletim şirketi katsayısı ile",
+        "D": "Tüketici Hakem Heyetince"
+      }
+    },
+    {
+      "id": 28,
+      "soru": "Dağıtım şirketlerinin müşterilerine yansıtacağı sistem kullanım bedellerinin kademelendirilmesi işlemi kim tarafından yapılır?",
+      "secenekler": {
+        "A": "BOTAŞ",
+        "B": "Valilik",
+        "C": "Kurul (EPDK)",
+        "D": "Şirketin kendisi"
+      }
+    },
+    {
+      "id": 29,
+      "soru": "Tarifeye esas doğal gaz miktarının tespitinde hacime karşılık hangi ısıl değer baz alınır ve gösterim hangi birimle yapılır?",
+      "secenekler": {
+        "A": "8100 kcal, sadece m3",
+        "B": "9155 kcal, m3 ve kWh",
+        "C": "10000 kcal, Joule",
+        "D": "4000 kcal, litre"
+      }
+    },
+    {
+      "id": 30,
+      "soru": "Tarifelerde hesaplamalara dahil edilecek enflasyon tespitinde hangi iki endeks esas alınır?",
+      "secenekler": {
+        "A": "İTO Geçinme Endeksi ve TÜFE",
+        "B": "Yİ-ÜFE ve/veya TÜFE",
+        "C": "Dolar ve Euro Kuru",
+        "D": "Türkiye Cumhuriyet Merkez Bankası Faiz Oranı"
+      }
+    },
+    {
+      "id": 31,
+      "soru": "Dağıtım şebekesinin sorumluluk alanı içindeki serbest olmayan tüketicilere (abonelere) nasıl bağlantı tarifesi uygulanır?",
+      "secenekler": {
+        "A": "Sabit bağlantı tarifeleri uygulanır",
+        "B": "Serbestçe pazarlık yapılır",
+        "C": "Şirketin o anki isteğine bağlı tarifeler",
+        "D": "Abonenin gelirine göre farklı tarifeler"
+      }
+    },
+    {
+      "id": 32,
+      "soru": "Tarifeler yönetmeliğine göre tedarikçi kavramı; serbest tüketicilere ve dağıtım şirketlerine gaz satan toptan satış şirketlerini, ithalatçıları ve kimleri kapsar?",
+      "secenekler": {
+        "A": "Lojistik şirketlerini",
+        "B": "Aracılık hizmeti verenleri",
+        "C": "Üretim şirketlerini",
+        "D": "Dağıtım kontrol şirketlerini"
+      }
+    },
+    {
+      "id": 33,
+      "soru": "Perakende satışında, Kurul tarafından onaylanan 'Sistem kullanım bedeli' içerisinde temel olarak neler yer alır?",
+      "secenekler": {
+        "A": "Pazarlama ve reklam masrafları",
+        "B": "Birim hizmet ve amortisman bedelleri",
+        "C": "Temsil, ağırlama ve lüks tüketim masrafları",
+        "D": "Tüketici cezaları"
+      }
+    },
+    {
+      "id": 34,
+      "soru": "Dağıtım şirketleri elde ettikleri yasa dışı karları veya uygunsuz faaliyetlerinden dolayı aldıkları idari para cezalarını tarifelerine yansıtabilirler mi?",
+      "secenekler": {
+        "A": "Her zaman yansıtabilirler",
+        "B": "Hiçbir zaman maliyet olarak yansıtılamazlar",
+        "C": "Sadece %50'sini yansıtabilirler",
+        "D": "Kurul onay verirse yansıtabilirler"
+      }
+    },
+    {
+      "id": 35,
+      "soru": "Tarife önerisi zamanında Kuruma sunulmadığında veya eksiklikleri süresi içinde giderilmediğinde Kurulun hakkı nedir?",
+      "secenekler": {
+        "A": "Dağıtım şirketini kapatmak",
+        "B": "Şirkete ithalat yasağı getirmek",
+        "C": "Tarifeleri resen (kendiliğinden) belirlemek",
+        "D": "Lisansı iptal etmek"
+      }
+    },
+    {
+      "id": 36,
+      "soru": "Mücbir sebeplerin ortaya çıkması halinde tarifeler kim tarafından resen belirlenir?",
+      "secenekler": {
+        "A": "Kurul (EPDK)",
+        "B": "Şirket Yönetim Kurulu",
+        "C": "İletim Şirketi",
+        "D": "Belediye"
+      }
+    },
+    {
+      "id": 37,
+      "soru": "Bir dağıtım şirketinin dağıtım faaliyetleri dışında tahsilatına aracı olduğu vergi ve vergi benzeri bedelleri faturalarda nasıl göstermesi gerekir?",
+      "secenekler": {
+        "A": "Sistem kullanım bedeli içine gömerek",
+        "B": "Faturada tamamen ayrı kalemler olarak",
+        "C": "Hiç göstermeden",
+        "D": "İskonto gibi göstererek"
+      }
+    },
+    {
+      "id": 38,
+      "soru": "Perakende satış fiyatının üst sınırı aşağıdakilerden hangilerinden oluşur?",
+      "secenekler": {
+        "A": "Dağıtım şirketinin istediği ek kazançlar ve KDV toplamından",
+        "B": "Birim gaz alım fiyatı, sistem kullanım bedeli ve ilgili vergilerden",
+        "C": "Toptan satış fiyatının iki katından",
+        "D": "Bağlantı bedeli ve güvence bedelinin toplamından"
+      }
+    },
+    {
+      "id": 39,
+      "soru": "Dağıtım şirketi kendi müşterileri ile başka bir tedarikçiden gaz alan ancak aynı şebekeyi kullanan serbest tüketiciler arasında dağıtım bedeli açısından ayrım yapabilir mi?",
+      "secenekler": {
+        "A": "Ayrımsız eşit şartlar uygulamak zorundadır (Yapamaz)",
+        "B": "Ticari özgürlük çerçevesinde yapabilir",
+        "C": "Tüketici rızasıyla yapabilir",
+        "D": "Aradaki mesafe bazında istenildiği gibi fiyatlama yapar"
+      }
+    },
+    {
+      "id": 40,
+      "soru": "Sistem kullanım bedeli hangi esasa dayalı olarak müşterilerden veya tedarikçilerden tahsil edilir?",
+      "secenekler": {
+        "A": "Kullanım hacminden bağımsız maktu bir tutar üzerinden",
+        "B": "Hatta verdikleri yük ve tüketim (çekiş) profillerine göre",
+        "C": "Sadece müşteri statüsüne göre",
+        "D": "Sayacın tipine göre tek tip bir bedel üzerinden"
+      }
+    },
+    {
+      "id": 41,
+      "soru": "İç Tesisat Yönetmeliğine göre mülkiyeti müşteriye ait olan 'iç tesisat' nerede başlar?",
+      "secenekler": {
+        "A": "Sokak başındaki kanaldan",
+        "B": "İletim hattı branşmanından",
+        "C": "Basınç düşürme ve ölçüm istasyonu ile servis kutusu çıkışından",
+        "D": "Sadece sayaç çıkışından"
+      }
+    },
+    {
+      "id": 42,
+      "soru": "İç tesisata dâhil olan ana bileşenler temel olarak nereleridir?",
+      "secenekler": {
+        "A": "Dağıtım hatları ve çelik şebeke kısımları",
+        "B": "Sayaç hariç, doğal gaz tüketim cihazları, baca, atık gaz borusu ve mülkiyeti aboneye ait borular",
+        "C": "Yalnızca ocak ve kombi cihazı",
+        "D": "Sokak vanaları ve regülatörler"
+      }
+    },
+    {
+      "id": 43,
+      "soru": "İç tesisatın projelenmesi, tasarımı ve yapımı kim tarafından kime yaptırılır?",
+      "secenekler": {
+        "A": "Dağıtım şirketi tarafından kendi teknisyenlerine",
+        "B": "Müşteri tarafından seçilmiş yetkili bir sertifika sahibine",
+        "C": "Belediye tarafından dışarıdan firmalara",
+        "D": "Kurum tarafından belirlenen görevlilere"
+      }
+    },
+    {
+      "id": 44,
+      "soru": "İç tesisatta kullanılacak malzeme standartları için asgari referans nedir?",
+      "secenekler": {
+        "A": "Sadece Amerikan standartları (ANSI)",
+        "B": "TSE, EN, ISO, IEC gibi kabul edilmiş uygun standartlar",
+        "C": "Kullanılmış ancak sağlam görünen malzemeler",
+        "D": "Sadece Tüketici Derneklerinin onayladıkları cihazlar"
+      }
+    },
+    {
+      "id": 45,
+      "soru": "Herhangi bir standart belgesine sahip olmayan ancak çalışır durumda olan malzeme iç tesisatta kullanılabilir mi?",
+      "secenekler": {
+        "A": "Kesinlikle kullanılamaz",
+        "B": "Daha ucuzsa alternatif olarak kullanılabilir",
+        "C": "Şirket sözlü izin verirse kullanılabilir",
+        "D": "Tüketici tüm riskleri yazılı alırsa kullanılabilir"
+      }
+    },
+    {
+      "id": 46,
+      "soru": "Müşteri tarafından yetkili firmaya yaptırılan iç tesisatın fiziki kontrolü, proje onayı ve gaz vermeye uygunluğunun onayı kimin sorumluluğundadır?",
+      "secenekler": {
+        "A": "Sadece Kurulun (EPDK)",
+        "B": "Doğrudan bulunduğu sistemin (ilgili dağıtım veya iletim şirketinin) işletmecisi",
+        "C": "Yerel Belediyenin itfaiye departmanı",
+        "D": "Tüketici Hakem Heyeti"
+      }
+    },
+    {
+      "id": 47,
+      "soru": "Dağıtım şirketi, onayladığı doğalgaz iç tesisat projelerinin fiziki kontrolünü nasıl gerçekleştirir?",
+      "secenekler": {
+        "A": "Sadece zabıtalar eşliğinde",
+        "B": "Rastgele uzaktan sensörlerle",
+        "C": "Kendi teknik personeli veya kendi adına çalışan akredite denetim kurumları ile",
+        "D": "Sadece gözlem amacıyla dronelar ile"
+      }
+    },
+    {
+      "id": 48,
+      "soru": "Yapılan yerinde denetim neticesinde tesisat güvenlik standartlarına uygun bulunmazsa dağıtım şirketinin yetkisi nedir?",
+      "secenekler": {
+        "A": "Doğal gaz bağlamayı reddeder ve acil durumda mevcut gazı keser",
+        "B": "Risk bedeli adı altında ekstra ceza keserek gaz vermek zorundadır",
+        "C": "Müşterinin kusurlu eşyalarına doğrudan el koyar",
+        "D": "Hiçbir şey yapamaz, mevzuata rağmen gazı açmak zorundadır"
+      }
+    },
+    {
+      "id": 49,
+      "soru": "Uygunsuz kullanım, projesiz kaçak işlemler ve tüketici bakımsızlığından doğan kaza ve zararlardan yasal olarak kim sorumlu tutulamaz?",
+      "secenekler": {
+        "A": "Denetim görevini yapmış olan Dağıtım veya İletim şirketi",
+        "B": "Tesisatı kurallara aykırı kullanan müşterinin kendisi",
+        "C": "İç tesisatı projeye aykırı değiştiren yetkili firma/kişi",
+        "D": "Tesisat onaysız olmasına rağmen müdahale eden usta"
+      }
+    },
+    {
+      "id": 50,
+      "soru": "Müşterileri doğal gazı güvenli kullanmaları, cihaz bakımları ve kaçaklara karşı alacakları tedbirler hakkında bilgilendirme görevi kime aittir?",
+      "secenekler": {
+        "A": "Kurumun kendisine doğrudan",
+        "B": "Sistem yetkilisi Dağıtım veya İletim Şirketine",
+        "C": "Ev cihazları üreticisine",
+        "D": "Haber bültenlerine"
+      }
+    },
+    {
+      "id": 51,
+      "soru": "İç tesisatında sonradan değişiklik yapmak (tadilat) isteyen bir müşterinin izlemesi gereken hukuki yol nedir?",
+      "secenekler": {
+        "A": "Kendi başına gizlice modifiye etmek",
+        "B": "Değişikliği yetkili bir sertifika sahibine mutlaka projelendirtip onaylatmak",
+        "C": "Herhangi bir ustaya yaptırıp doğrudan kullanmaya devam etmek",
+        "D": "Dağıtım şirketine haber vermeden sadece vanayı kapatarak sökmek"
+      }
+    },
+    {
+      "id": 52,
+      "soru": "Bir serbest tüketici doğrudan ulusal iletim şebekesinden (BOTAŞ üzerinden) bağlantı hattı çekerek gaz alıyorsa iç tesisat onayı kimin tarafından gerçekleştirilir?",
+      "secenekler": {
+        "A": "Tesisatı yapan sertifikalı kişi tek başına beyanla onaylar",
+        "B": "Sistemin işletmecisi konumundaki İletim şirketi (BOTAŞ) tarafından onaylanır",
+        "C": "Belediye sınırlarında olduğu için Belediye Fen işleri onaylar",
+        "D": "Müşteri kendi riskini üstlenerek onaylar"
+      }
+    },
+    {
+      "id": 53,
+      "soru": "Dağıtım şirketince henüz onayı yapılmamış tesisatlara herhangi bir özel koşulda doğal gaz verilebilir mi?",
+      "secenekler": {
+        "A": "Evet, abonenin yazılı acil beyanıyla verilebilir",
+        "B": "Sadece aşırı soğuk kış günlerinde insaniyet namına verilir",
+        "C": "Hayır, hiçbir şekilde ve koşulda onaylanmamış tesisata gaz verilemez",
+        "D": "Ekstra yüksek güvence bedeli yansıtılarak deneme amaçlı verilir"
+      }
+    },
+    {
+      "id": 54,
+      "soru": "İç Tesisat Yönetmeliğine aykırı olmamak suretiyle bölgeye özel ek teknik düzenleme ve kuralları, dağıtım şirketleri kimin onayı ile devreye alabilir?",
+      "secenekler": {
+        "A": "Tüketici Mahkemesi kararı ile",
+        "B": "İlgili İlçe Belediyeleri onayı ile",
+        "C": "Sadece Kurum (EPDK) onayı ile",
+        "D": "Makine Mühendisleri Odası onayı ile"
+      }
+    },
+    {
+      "id": 55,
+      "soru": "Doğal Gaz piyasasında müşterilere iç tesisat tasarımı, yapımı, bakım ve onarım hizmeti verecek olan özel/tüzel kişiler hangi yeterlilik belgesine sahip olmalıdır?",
+      "secenekler": {
+        "A": "Yalnızca Mesleki Yeterlilik Belgesi yeterlidir",
+        "B": "Bulundukları ilin Ticaret Odası Özel İzni",
+        "C": "Kurum veya Kurumun yetkilendirdiği kuruluştan alınmış geçerli bir 'Sertifika'",
+        "D": "Belediyeden alınmış Ustalık ruhsatı"
+      }
+    },
+    {
+      "id": 56,
+      "soru": "Kurumun (EPDK) iç tesisat alanındaki asli fonksiyonu aşağıdakilerden hangisidir?",
+      "secenekler": {
+        "A": "Her abonenin tesisat projesini tek tek elle onaylamak",
+        "B": "Piyasadaki kuralları düzenlemek ve gerektiğinde sertifika iptali gibi yaptırımları uygulamak",
+        "C": "Tesisatlar için kaynak elektrotlarını denetlemek",
+        "D": "Doğrudan arıza ekiplerini yönetmek"
+      }
+    },
+    {
+      "id": 57,
+      "soru": "Müşteri, olası bir doğal gaz kazası veya sızıntısı durumunda tesisatını güvenli duruma almak için aldığı önlemlerin yeterliliğinden kime karşı yasal olarak sorumludur?",
+      "secenekler": {
+        "A": "Kullanım kılavuzlarına ve şirketin uyarılarına binaen bizzat kendisi sorumludur",
+        "B": "Dağıtım Şirketi müşterisi adına sorumludur",
+        "C": "Tesisatı en son boyayan ustaya devredilir",
+        "D": "Hiçbir sorumluluğu yoktur, tamamen devletin kusurudur"
+      }
+    },
+    {
+      "id": 58,
+      "soru": "Dağıtım şirketi, personeli yetersiz olduğunda iç tesisat kontrolü yükümlülüğünü akredite başka bir firmaya devretse dahi genel sorumluluğu ortadan kalkar mı?",
+      "secenekler": {
+        "A": "Evet, sorumluluk tamamen anlaşma yaptığı taşerona geçer",
+        "B": "Hayır, sorumluluğu kendisinde kalmak şartıyla kontrol yetkisini verebilir",
+        "C": "Bu devir kesinlikle yasaktır, yapılamaz",
+        "D": "Kuruldan yetki devri alarak sorumluktan kurtulur"
+      }
+    },
+    {
+      "id": 59,
+      "soru": "Müşterinin tüketim miktarını ölçen Doğal Gaz Sayacı, müşteriye ait İç Tesisatın mülkiyeti kapsamına dâhil midir?",
+      "secenekler": {
+        "A": "Evet, her zaman dahildir",
+        "B": "Hayır, sayaç dağıtım şirketinin mülkiyetindedir ve iç tesisat haricidir",
+        "C": "Acente sayaç satmışsa dahildir",
+        "D": "Sadece faturalı sayaçlar dahildir, ön ödemeliler hariçtir"
+      }
+    },
+    {
+      "id": 60,
+      "soru": "Doğal gaz iç tesisatının kullanımı esnasında güvenliğin zafiyete uğratılmasını engellemek amaciyla yapılan kontroller sonrasında kim 'Tesisat Uygundur' raporunu imzalar?",
+      "secenekler": {
+        "A": "Sadece müşteri",
+        "B": "Doğal gaz tesisatını yapan sertifikalı firmanın yetkili mühendisi ve dağıtım şirketi personeli beraber imza altına alır",
+        "C": "Kaymakamlık onayı şartı vardır",
+        "D": "Zabıta amirinin imzası yeterlidir"
+      }
+    },
+    {
+      "id": 61,
+      "soru": "Dağıtım şirketleri, acil bir gaz kaçağı ihbarı geldiğinde büyük şehirlerde ve alt merkeze yakın bölgelerde olaya en geç kaç dakikada müdahale edecek organizasyonu kurmak zorundadır?",
+      "secenekler": {
+        "A": "60 dakika",
+        "B": "30 dakika",
+        "C": "15 dakika",
+        "D": "45 dakika"
+      }
+    },
+    {
+      "id": 62,
+      "soru": "Dağıtım şebekesine ilk bağlantı kapsamında talep edilen Abone Bağlantı Bedeli kaç defa tahsil edilir?",
+      "secenekler": {
+        "A": "Her yıl tekrarlanarak alınır",
+        "B": "On taksit halinde tahsil edilebilir ancak sadece 1 defa alınır",
+        "C": "Aylı faturaya sürekli yansıtılır",
+        "D": "Yalnızca sözleşme yenilemelerinde"
+      }
+    },
+    {
+      "id": 63,
+      "soru": "Yaz aylarına denk gelen 15 Mayıs - 15 Ekim arasındaki düşük tüketim döneminde, dağıtım şirketi konut tüketicilerinin sayaçlarını azami ne kadar sürede bir okuyabilir?",
+      "secenekler": {
+        "A": "Her ay zorunlu okur",
+        "B": "En fazla 2 ayda bir okuyarak tahakkuk ettirebilir",
+        "C": "3 ayda bir",
+        "D": "Bu dönde yalnızca okuma bedeli yansıtır okumaz"
+      }
+    },
+    {
+      "id": 64,
+      "soru": "Dağıtım şirketi, bir binaya doğal gaz bağlanması için yapılan resmi talebi kendisine ulaştıktan sonra değerlendirip en geç kaç gün içinde sonuçlandırmalıdır?",
+      "secenekler": {
+        "A": "3 gün",
+        "B": "15 gün",
+        "C": "30 gün",
+        "D": "10 iş günü"
+      }
+    },
+    {
+      "id": 65,
+      "soru": "Sokağınızdan geçen ana dağıtım şebekesinin boruları, vanaları ve tesis edilmiş servis kutularının mülkiyeti/bakım sorumluluğu kime aittir?",
+      "secenekler": {
+        "A": "Sokağı kullanan Müşteriye",
+        "B": "Dağıtım lisansı sahibi şirkete",
+        "C": "Yerel Belediyeye",
+        "D": "Enerji Bakanlığına"
+      }
+    },
+    {
+      "id": 66,
+      "soru": "Dağıtım şirketi, doğal gaz ölçümünde kullanılan mekanik sayaçların düzgün çalıştığından emin olmak için hangi sıklıkta periyodik kontrol eder ve bakımını sağlar?",
+      "secenekler": {
+        "A": "Asgari olarak her yıl düzenli periyotlarla",
+        "B": "Sadece on yılda bir zoraki olarak",
+        "C": "Ancak müşteri arıza talebi bırakırsa onarılır, periodik yoktur",
+        "D": "Sanayi Bakanlığı'nın 5 yılda bir muayenesinden sonra"
+      }
+    },
+    {
+      "id": 67,
+      "soru": "Şirket ile yapılan kullanım sözleşmelerinde yer verilecek olan gecikme zammı oranı belirlenirken yasal üst sınır nedir?",
+      "secenekler": {
+        "A": "Ticari kredi faiz sınırını geçemez",
+        "B": "6183 sayılı Amme Alacaklarının Tahsili Hakkındaki kanunda belirtilen gecikme zammı oranını aşamaz",
+        "C": "Dağıtım şirketinin belirleyeceği serbest sınır",
+        "D": "Kurum'un vereceği özel izin kadar"
+      }
+    },
+    {
+      "id": 68,
+      "soru": "Tüketici tahakkuk eden faturasını ödemediğinde, doğal gaz arzının durdurulması(kesilmesi) işlemi için en az kaç iş günü öncesinden bildirimde (ihbarname/mesaj vb.) bulunulması şarttır?",
+      "secenekler": {
+        "A": "1 iş günü öncesinden",
+        "B": "En az 3 iş günü (72 saat) öncesinden",
+        "C": "10 iş günü sonrası",
+        "D": "Ay sonuna kadar bildirim verilmesi"
+      }
+    },
+    {
+      "id": 69,
+      "soru": "Ön ödemeli (kartlı) sayaç kullanmak isteyen tüketiciler için, dağıtım şirketi onları mevcut sağlam mekanik sayacını zorla ön ödemeli yapmaya mecbur bırakabilir mi?",
+      "secenekler": {
+        "A": "Evet, istediği mahalleyi zorlayabilir",
+        "B": "Hayır, müşteri talebi dışında hiçbir şekilde zorlamada bulunamaz",
+        "C": "Eğer faturayı bir kez geciktirdiyse zorunlu yapar",
+        "D": "Sadece yeni kurulan binalarda zorlayabilir"
+      }
+    },
+    {
+      "id": 70,
+      "soru": "Faturasını ödeyememiş ancak evinde cihaza bağlı hasta bulunan, veya şehit/gazi yakınlarının ikamet ettiği tespit edilen adreslerin doğal gazı asgari kaç dönem(ay) ödenmemesi halinde kesilebilir?",
+      "secenekler": {
+        "A": "Standart kural olarak birinci dönem kesilir",
+        "B": "Sosyal durum gözetilerek asgari üç (3) fatura dönemi sonrasında",
+        "C": "Hiçbir şekilde borçtan ötürü kesilmez, devlet karşılarmalı",
+        "D": "Bir yıllık borç döngüsüne kadar kesilmez"
+      }
+    },
+    {
+      "id": 71,
+      "soru": "Kullanılan gazın hesabını tutan sayaçların resmi muayenesi, kalibrasyonu ve doğru çalışıp çalışmadığının hukuki dayanağı hangi mevzuat ile düzenlenmiştir?",
+      "secenekler": {
+        "A": "Borçlar Kanunu",
+        "B": "İmar Kanunu",
+        "C": "Ölçüler ve Ayar Kanunu hükümleri uyarınca Sanayi Bakanlığı denetimi",
+        "D": "Rekabetin Korunması Hakkında Kanun"
+      }
+    },
+    {
+      "id": 72,
+      "soru": "Dağıtım şebekesine habersiz veya standart dışı müdahale ederek 1 takvim yılı içerisinde aynı adreste aynı abone tarafından 'Usulsüz doğal gaz' kullanıldığı tespit edilen müşterinin sözleşmesi en fazla kaçıncı tespitte direk iptal edilir?",
+      "secenekler": {
+        "A": "Birinci defada iptal edilir",
+        "B": "İkinci defa uyarıldığında",
+        "C": "Israrla 3. defa (üç kez) usulsüzlük tespiti durumunda",
+        "D": "Beşinci uyarısında"
+      }
+    },
+    {
+      "id": 73,
+      "soru": "Dağıtım şirketi personeli tarafından, konut abonesinin borcundan vb. dolayı doğal gazı kesecek veya hizmetin durdurulması işlemini uygulayacağı günler arasından hangisinde bu eylem yapılamaz?",
+      "secenekler": {
+        "A": "Okul günleri",
+        "B": "Tatil günleri ve resmi tatillerin bir önceki yarım günlerinde (Arifelerde)",
+        "C": "Ay ortasında",
+        "D": "Pazartesi sendromu nedeniyle pazartesileri"
+      }
+    },
+    {
+      "id": 74,
+      "soru": "Tüketiciye gelen faturanın son ödeme tarihinden itibaren en az kaç günlük bir uyarı süresi sonrası şirket, sözleşmedeki yaptırım hakkını kullanarak gaz kesebilir?",
+      "secenekler": {
+        "A": "Ödenmemiş fatura uyarı tebliğine istinaden on beş (15) gün içerisinde süre verir",
+        "B": "Bildirimin hemen ertesi günü keser",
+        "C": "60 gün bekleme süresinden sonra",
+        "D": "Uyarı yapmadan faiz uygular"
+      }
+    },
+    {
+      "id": 75,
+      "soru": "Müşterinin yanlış okunduğunu iddia ettiği tüketim faturasına yasal itiraz süresi, söz konusu faturanın kendisine bildirilmesinden(tebliğinden) itibaren ne kadardır?",
+      "secenekler": {
+        "A": "1 aylık süre sonuna kadar",
+        "B": "15 iş günü içinde",
+        "C": "6 aylık zamanaşımı süresince",
+        "D": "Tebliğ tarihinden itibaren bir (1) yıl boyunca"
+      }
+    },
+    {
+      "id": 76,
+      "soru": "Müşterinin kendisine düzenlenen dağıtım faturasına itiraz etmesi, faturanın son ödeme yılındaki 'ödeme yükümlülüğünü' yasal olarak durdurur mu?",
+      "secenekler": {
+        "A": "Evet, itirazın sonuçlanmasına kadar müşteri ödeme yapmaz",
+        "B": "Hayır durdurmaz, müşteri vadesinde faturayı öder; itiraz haklı çıkarsa şirketten faiziyle iade veya mahsup alır",
+        "C": "İtiraz süresince %50 borç tahsilatı dondurulur",
+        "D": "Sadece mahkemeye verilirse durdurulur"
+      }
+    },
+    {
+      "id": 77,
+      "soru": "Dağıtım şirketi, teknik bir sayaç arızası veya kendi sistemsel hatasından dolayı aboneye eksik fatura (eksik tahakkuk) çıkardığını tespit ederse; düzeltme işlemini yaparken geçmişe dönük süreci nasıl işletir?",
+      "secenekler": {
+        "A": "Geçmiş 5 yıllık tüm kaybı yüksek gecikme faiziyle tek faturada gönderir",
+        "B": "Tüketiciyi suçlayıp sözleşmesini derhal iptal eder",
+        "C": "Geçmiş 1 yılı aşmamak kaydıyla, eksik kalan ayların ortalamasını çıkarıp, tüketiciye cezasız ve faizsiz taksitlendirme imkanı sunarak tahsil eder",
+        "D": "Şirket hatası olduğu için eski bedelleri silip bedelsiz sayar"
+      }
+    },
+    {
+      "id": 78,
+      "soru": "Sözleşmenin abonenin tayini, vefatı veya tahliyesi gibi müşteri kusurundan kaynaklanmayan bir nedenle feshedilmesi suretiyle sona erdiği durumlarda; içeride kalan fazla veya depozito (güvence) alacakları abonenin bildirdiği banka hesabına en geç ne kadar sürede iade edilmelidir?",
+      "secenekler": {
+        "A": "180 gün",
+        "B": "15 gün (iş günü dahilinde hızlıca)",
+        "C": "Aynı gün içinde veznede",
+        "D": "60 gün"
+      }
+    },
+    {
+      "id": 79,
+      "soru": "Serbest olmayan (Standart Ev, Esnaf vd.) tüketicilerin yazılı abone bağlantı talebi üzerine dağıtım şirketi altyapı eksikliği vb. sübjektif gerekçelerle reddederse; tüketici bu durumu Kuruma (EPDK) ne kadar yasal süre içerisinde şikâyet hakkına sahiptir?",
+      "secenekler": {
+        "A": "Ret bildiriminin alınmasından itibaren 60 gün içinde",
+        "B": "10 iş gününde",
+        "C": "5 gün içinde acil itirazla",
+        "D": "Herhangi bir zaman sınırlaması olmaksızın istediği zaman"
+      }
+    },
+    {
+      "id": 80,
+      "soru": "Dağıtım ağındaki doğal gaz alt yapı bilgi sistemi (CBS, Vana koordinatları vs.) olarak kurulacak stratejik şebeke kayıtları siber veya fiziksel felaketlere karşı güvenli sunucularda en az hangi sıklıkta yedeklenmek zorundadır?",
+      "secenekler": {
+        "A": "Canlı olarak anlık",
+        "B": "Her yıl sonu bir kereliğine",
+        "C": "En az 3 ayda bir fiziki diskte yedekleri alınmalıdır",
+        "D": "Kurum talep ettikçe yedeklenir"
+      }
+    },
+    {
+      "id": 81,
+      "soru": "Dağıtım şirketi denetiminde bir adreste sayaca müdahale edilerek 'Kaçak doğal gaz kullanımı' tespit edildiğinde, şirketin talep edeceği gasp edilen tüketim miktarının maddi zararına ek bir ceza niteliğinde uygulanan 'Kaçak bedeli katsayısı' genel ceza ilk seferinde tutarın kaç katıdır?",
+      "secenekler": {
+        "A": "Tüketim miktarının birebir %100 tahsilatı yeterlidir",
+        "B": "Tespit edilen hacim bedelinin %200'ü (2 Katı) olarak cezai tahsilat yapılır",
+        "C": "3 Katı hesaplanır",
+        "D": "Asgari asgari ücretin 10 katı standart kesilir"
+      }
+    },
+    {
+      "id": 82,
+      "soru": "Dağıtım şirketleri her yatırım yılında bölgesindeki genişleme, kapasite artışı ve yatırım planlamalarını, en geç hangi aya kadar hazırlayıp Kurulun görüşüne sunmalıdırlar?",
+      "secenekler": {
+        "A": "Planlanan yatırım yılının en geç Kasım ayının sonuna kadar",
+        "B": "İlk çeyreğin (Nisan) sonuna kadar her işletme dönemi",
+        "C": "Yenileme için Eylül ayı sonunda",
+        "D": "Kesin kuralı yoktur, talep oldukça"
+      }
+    },
+    {
+      "id": 83,
+      "soru": "Normal bir gaz sızıntısı ve mutfağa dolan bir kaçak durumunda tüketiciler tarafından kokunun kolayca algılanabilmesi için dağıtım şirketinin THT (Tetrahidrotiyofen) gibi kimyasallarla istasyonlarda gaza uyguladığı işleme teknik dilde ne ad verilir?",
+      "secenekler": {
+        "A": "Nemlendirme",
+        "B": "Kokulandırma (Odorizasyon)",
+        "C": "Süzme / Tozdan arındırma",
+        "D": "Gazın süpürülmesi"
+      }
+    },
+    {
+      "id": 84,
+      "soru": "Kaliteli bir işletme için Dağıtım bölgesinde bakım-onarım ve acil müdahale amaçlı bulundurulması zorunlu olan 'Donanımlı müdahale araç veya arıza filosu' dağılımı neye göre zorunlu tutulmuştur?",
+      "secenekler": {
+        "A": "Bölgenin yüzölçümü m2'sine göre",
+        "B": "İlk 50 bin abone için en az iki adet ve ilave her 50 bin abone artışında bir adet tam teşekküllü araç şeklinde sayılara göre",
+        "C": "Karşılaşılabilecek maksimum arıza tipine göre asgari on tane",
+        "D": "Tüm acil birimler için ortak bir adet minibüs kafi gelir"
+      }
+    },
+    {
+      "id": 85,
+      "soru": "Acil kriz durumlarında Hastane, Okul veya huzurevi gibi kritik yerler için yaşanan lokal gaz kesintileri 6 saati (belirli süre) aşması halinde; dağıtım şirketinin yasal tutumu yetkisi dâhilinde ne olmalıdır?",
+      "secenekler": {
+        "A": "Kaderlerine bırakarak beklemelerini dikte etmek",
+        "B": "Kritik kurumların geçici ısınma veya yakıt/alternatif tüp ihtiyaçlarını sağlamak için gerekli tüm tedbirleri alıp destek sağlamak",
+        "C": "Kendi sorumluluğunda olmadığını basına bir bildiriyle açıklamak",
+        "D": "Derhal Valilikle beraber binayı tahliye etmek"
+      }
+    },
+    {
+      "id": 86,
+      "soru": "Bölgesel altyapı güçlendirilmesi vb. sebebiyle önceden planlanmış, haberli ve programlı doğal gaz onarım veya kesintileri için abonelere en az ne kadar zaman önceden bilgilendirme/yayın yapılması şarttır?",
+      "secenekler": {
+        "A": "Hiçbir zaman gerekmez",
+        "B": "Bildirim basında veya sms ile en az üç (3) gün önceden şeffafça yapılmalıdır",
+        "C": "On gün önceden mühürlü mektup ile bildirmek zorundadır",
+        "D": "Radyo yoluyla bir hafta önce verilmeli"
+      }
+    },
+    {
+      "id": 87,
+      "soru": "Dağıtım ve Müşteri Hizmetleri Yönetmeliği doğrultusunda, ihbar, talep ve şikâyet sistemlerini karşılamak üzere dağıtım şirketleri tarafından kurulan 'Çağrı Merkezi 187' sesli görüşmeleri en az ne kadar süreyle veri tabanlarında kayıt altına alınır ve saklanarak Kuruma açılabilir vaziyette olmalıdır?",
+      "secenekler": {
+        "A": "Sistem hafızası dolduğunda sadece 1 ay",
+        "B": "Doğrudan KVKK izni gerektirmediği için kaydedilmez, dinlenilmez",
+        "C": "Tüm ses kayıtları güvenli sunucularda 1 yıl süreyle operasyonel, toplam asgari kanuni süreler kadar yedekli arşiv saklanır",
+        "D": "Anında silinir"
+      }
+    },
+    {
+      "id": 88,
+      "soru": "Mekanik sayacın okuma ekipleri tarafından (Kapalı kapı, köpek vb. engellerle) ulaşılamayıp okunamadığı durumlarda; adrese bırakılan veya SMS şeklinde iletilen son endeks girme bildirim formu/talebi abone tarafından en geç kaç gün içinde şirkete endeksi girilmiş ya da iletilmiş olarak bildirilmelidir?",
+      "secenekler": {
+        "A": "Hemen farkına vardığı gün içinde okuyup e-devletten onaylar",
+        "B": "En geç 3 iş günü içinde müşteri hizmetleri veya dijital kanaldan okunan tüketimi iletmelidir",
+        "C": "On gün boyunca süre verilir",
+        "D": "Hiç bildirmese de faturasına kıyasen aylık fatura yansıtılır"
+      }
+    },
+    {
+      "id": 89,
+      "soru": "Bir konutun asıl abonesinin vefatı durumunda, aynı konutta ikamet eden eşi, diğer mirasçıların rızası ile beraber mevcut olan abonelik sözleşmesini kendi adına (aynı sayaçla) devralırken 'Güvence Bedeli' hususunda nasıl bir süreç işletilir?",
+      "secenekler": {
+        "A": "Eski depozito yok sayılır, yeniden en yüksek fiyattan sözleşme ve güvence bedeli tahsil edilir",
+        "B": "İşlem masrafı için çift depozito teminatı istenir",
+        "C": "Eski güvence bedeli, hak mağduriyeti olmamak adına sözleşme üzerine yeni isme aktarılarak varise nakledilir; ilave veya yeni bir güvence bedeli istenme işlemi uygulanamaz",
+        "D": "Devir işlemi kesinlikle yapılmaz, sayacın sökülüp yeni proje çizilmesi sağlanır"
+      }
+    },
+    {
+      "id": 90,
+      "soru": "Tüketiciden herhangi bir fatura ödememe teminatı (Güvence bedeli) tahsil edilemeyeceği açıkça belirtilen ayrıcalıklı resmi abonelik türü aşağıdaki grup/kurumlardan hangisidir?",
+      "secenekler": {
+        "A": "Özel Hastaneler, Diş Klinikleri ve Poliklinikler",
+        "B": "Merkezi yönetim kapsamındaki Genel Bütçeli Kamu İdareleri, İbadethane olarak tescili Diyanetçe verilmiş Camiler, Mescitler veya resmi dini kurum binaları",
+        "C": "Devletin desteklediği sanayi Odaları",
+        "D": "Özel İlk ve Orta Öğretim Okulları ve yurtlar"
+      }
+    },
+    {
+      "id": 91,
+      "soru": "Dağıtım şebekesinin anlık olarak basınç durumunu, arıza ihbar bölgelerini, kaçak veya patlama durumlarını önlemek adına 7/24 şirketlerin uzaktan kumanda edeceği ve dengeleme sağlayacağı ana otopilot kontrol merkezine ne isim verilir?",
+      "secenekler": {
+        "A": "Teknik Servis Veznesi",
+        "B": "SCADA ile Sevkiyat Kontrol Merkezi",
+        "C": "Acil Dağıtım Kontrol Paneli Şefliği",
+        "D": "Sinyalizasyon Merkezi"
+      }
+    },
+    {
+      "id": 92,
+      "soru": "Vatandaşların indirimli ya da ucuz tarifeden aşırı limitlerde faydalanarak stok yapmasının önüne geçmek için ön ödemeli sayaç (kontörlü) kullanımında, bir defada karta en fazla ne kadar gaz yükletilebilir (limit politikası)?",
+      "secenekler": {
+        "A": "Müşterinin geçmiş tüketim profiline bağlı limitlendirme; kural olarak müşteri adına ölçümlenen en yüksek tüketim ortalamasına sahip son iki yılı temelinde o hane için azami aylık tüketim miktarı kadar ortalanmış tutar verilir",
+        "B": "Sınırsızdır, tüketici kartının kapasitesi kadar gaz alır",
+        "C": "Kesin bir yıllık tüm miktar indirim bitmeden verilebilir",
+        "D": "Tüm müşterilere standart asgari kullanım kotası (500 M3) sabittir"
+      }
+    },
+    {
+      "id": 93,
+      "soru": "Dağıtım şirketi, denetim sırasında tespit ettiği eksik iç tesisatlar, aşırı tehlikeli havalandırma kapamaları veya düzensiz yapı için doğal gaz kesintisi ve can güvenliği mührü vurduktan sonra, müşteri bu eksiklikleri belgeli ve projeli şekilde düzelttirirse aboneye yeniden hizmet ne kadar sürede verilir?",
+      "secenekler": {
+        "A": "Hemen anında cephesel olarak açılabilir",
+        "B": "Güvenlik onayları sonrası 24 saati geçmeden en kısa sürede gaz güvenli verilir",
+        "C": "Bir hafta bekleme cezasına girer",
+        "D": "48 saatlik sistem denetimi biter bitmez"
+      }
+    },
+    {
+      "id": 94,
+      "soru": "Konut doğal gaz kullanımı tahakkuk okuma (Faturalandırma) işlemlerinde tüketimi o ay için asgari miktar olan ortalama 15 m3 e ulaşmayan ölçüm rakamı için şirketin inisiyatifi/uygulaması hangi yöndedir?",
+      "secenekler": {
+        "A": "Her ne koşul ile olursa olsun asgari taban bedel maktu ödeme olarak faturaya yansıtılır",
+        "B": "Dağıtım şirketi o dönemde okunduğu halde asgari hacme gelmemiş tüketimi erteleyip o dönem faturalandırmama veya diğer aya devretme hakkına sahiptir",
+        "C": "Tüketimi eksik kullandığı için ek güvence bedeli faturası tahakkuk ettirilir",
+        "D": "Uzun süre tüketmediği için sözleşmesi haber verilmeden feshedilir"
+      }
+    },
+    {
+      "id": 95,
+      "soru": "Tüketici memnuniyeti kapsamında müşteri şahsi abonelik geçmişi ve teknik kullanım bilgileri hangi haller dışında koruma altında ve gizli tutulmak mevzuatı zorundadır?",
+      "secenekler": {
+        "A": "Hiçbir adli halde dahi paylaşılamaz mutlak gizlidir",
+        "B": "Yasal emniyet/Adli kurum zorunluluğu, hukuki talep veya müşterinin kendi ıslak imzalı/yazılı açık muvafakati (izni) dışında üçüncü şahıs şirketler ile kesinlikle paylaşılamaz",
+        "C": "Kurum içi sadece pazarlama araştırmaları için anonim aktarımı serbestiyet taşır, müşteri buna imza atmıştır",
+        "D": "İnternet altyapı hizmeti satan komşu iştirakçi şirketlere kolaylık için devredilebilir"
+      }
+    },
+    {
+      "id": 96,
+      "soru": "Tüketicinin, dağıtım şirketine haber vermeden veya sertifika taşımayan (yetersiz) ustalar aracılığıyla evine yetkisiz tadilat, kazan büyütme gibi işleri iç tesisata yaptırdığında karşılaştığı şirket yaptırımı yönetmelikte hangi madde kapsamında değerlendirilir?",
+      "secenekler": {
+        "A": "Usulsüz Doğal Gaz kullanımı cezası",
+        "B": "Nitelikli Hırsızlık",
+        "C": "Kanuna Saygısızlık İşlemi",
+        "D": "Kaçak gaz hırsızlığı olarak polise sevk"
+      }
+    },
+    {
+      "id": 97,
+      "soru": "Serbest tüketicilerin aynı adreste toplu bulunan diğer müşterilerle ile beraber bir organize sanayi bölgesindeki gibi şebekeye giden kendilerine ait 'Bağlantı hatlarını' bedelini kendileri ödeyerek kendi sertifikalı firmaları aracılığıyla yasal proje ile imal etmeleri ve kullanıma devreye sokmaları şartı sonrasındaki mülkiyet durumu yasanın emrinde ne şekilde düzenlenir?",
+      "secenekler": {
+        "A": "Müşterinin özel malı olur",
+        "B": "Gaz arzı başlanan tarih itibariyle yasal bakım/işletme bütünlüğü adına tamamıyla dağıtım şirketine bila bedel (bedelsiz) devredilir mülkiyeti geçer ve şirketin resmi şebekesine kaydedilir",
+        "C": "Kamu Hazinesine Kiralama yöntemi uygulanır",
+        "D": "Sanayi Bakanlığına irat kaydedilir"
+      }
+    },
+    {
+      "id": 98,
+      "soru": "Enerji Piyasası Düzenleme Kurulu (EPDK) tarafından duyurulan veya yenilenen bir bölgenin 'Dağıtım lisansı ihalesinde', özel firmalar temel ve asıl hangi finansal bedel üzerinden en çok yatırımı kapsayacak en ucuz teklif ile rekabet ederler?",
+      "secenekler": {
+        "A": "Devlete bırakılacak olan kâr payı vergisi tutarı",
+        "B": "Her aboneye hediye edilecek ilk gaz bedeli oranı",
+        "C": "Birim hizmet ve amortisman bedeli rakamı üzerinden eksiltme yoluyla",
+        "D": "Şirketin sermaye gücüne göre ihalenin kazanıldığı bir sistem"
+      }
+    },
+    {
+      "id": 99,
+      "soru": "Müşterinin faturayı ödeyemediğinden yanlış tahsilat yapılması neticesinde fazla bedel ödediği durumun iadesi sırasında, müşteri asıl faturadan ayrı olarak mağduriyet yaşadığını ifade ederek doğrudan dağıtım şirketi üzerine ilave manevi tazminat vb. hak talebini ne şekilde gerçekleştirir?",
+      "secenekler": {
+        "A": "Dağıtım şirketi sadece Tüketici Kanunları ve Kurul mevzuatı çerçevesindeki mevcut belirlenmiş ticari fatura usul sınırlarını ve yasal belirlenen güvencesi kapsamında gecikme zammını tazmin eder. Kalan ilave tazminat ise genel hukuki haklarına binaen mahkemelerde aranır.",
+        "B": "Asla hiçbir manevi veya maddi talep edemez",
+        "C": "Sadece kurum onayıyla bir üst paket abonesi hakkı kazanır",
+        "D": "Ödenen tüm fatura %200 geri ödenmek suretiyle iptal edilir"
+      }
+    },
+    {
+      "id": 100,
+      "soru": "Büyük donlar veya tedarik sıkıntısı yaşanılan ağır kış şartları boyunca olası gaz yetersizliği ya da basınç çökmesi (acil durumlarda) kullanmak ve şehri dondurmamak için oluşturulan mevzuattaki 'Acil Eylem Planında' aslen kural olarak ne yer almaz?",
+      "secenekler": {
+        "A": "Koordinasyon için Kriz yönetim merkezinin kurulması ve yetkileri",
+        "B": "Hayati kuruluşlar ile sanayi aboneleri arasında yapılan kademeli müdahale ve kesinti programı sırası",
+        "C": "Tüm çalışanlara bu kriz günlerinde ekstra tehlike primi ödeme politikası",
+        "D": "Arıza giderildikten sonra gaz kesintisi yapılmış bölgelerin yeniden şebekeye adım adım devreye alınması prosedürü"
+      }
+    }
+  ],
+  "cevaplar": {
+    "1": "A",
+    "2": "B",
+    "3": "A",
+    "4": "C",
+    "5": "B",
+    "6": "C",
+    "7": "B",
+    "8": "C",
+    "9": "B",
+    "10": "B",
+    "11": "B",
+    "12": "A",
+    "13": "A",
+    "14": "B",
+    "15": "B",
+    "16": "C",
+    "17": "C",
+    "18": "B",
+    "19": "A",
+    "20": "B",
+    "21": "B",
+    "22": "C",
+    "23": "B",
+    "24": "A",
+    "25": "C",
+    "26": "B",
+    "27": "B",
+    "28": "C",
+    "29": "B",
+    "30": "B",
+    "31": "A",
+    "32": "C",
+    "33": "B",
+    "34": "B",
+    "35": "C",
+    "36": "A",
+    "37": "B",
+    "38": "B",
+    "39": "A",
+    "40": "B",
+    "41": "C",
+    "42": "B",
+    "43": "B",
+    "44": "B",
+    "45": "A",
+    "46": "B",
+    "47": "C",
+    "48": "A",
+    "49": "A",
+    "50": "B",
+    "51": "B",
+    "52": "B",
+    "53": "C",
+    "54": "C",
+    "55": "C",
+    "56": "B",
+    "57": "A",
+    "58": "B",
+    "59": "B",
+    "60": "B",
+    "61": "C",
+    "62": "B",
+    "63": "B",
+    "64": "D",
+    "65": "B",
+    "66": "A",
+    "67": "B",
+    "68": "B",
+    "69": "B",
+    "70": "B",
+    "71": "C",
+    "72": "C",
+    "73": "B",
+    "74": "A",
+    "75": "D",
+    "76": "B",
+    "77": "C",
+    "78": "B",
+    "79": "A",
+    "80": "C",
+    "81": "B",
+    "82": "A",
+    "83": "B",
+    "84": "B",
+    "85": "B",
+    "86": "B",
+    "87": "C",
+    "88": "B",
+    "89": "C",
+    "90": "B",
+    "91": "B",
+    "92": "A",
+    "93": "B",
+    "94": "B",
+    "95": "B",
+    "96": "A",
+    "97": "B",
+    "98": "C",
+    "99": "A",
+    "100": "C"
+  }
+}
