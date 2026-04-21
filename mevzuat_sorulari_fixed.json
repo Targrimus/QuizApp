@@ -9,7 +9,7 @@
         "B": "Bakanlık",
         "C": "BOTAŞ",
         "D": "Belediyeler",
-        "E": "Belediye Encümeni"
+        "E": "TSE"
       },
       "cevap": "A"
     },
@@ -22,7 +22,7 @@
         "B": "Kurum tarafından ihalede belirlenen süre",
         "C": "Sabit 30 yıl",
         "D": "Şirketin talebine bağlı süre",
-        "E": "30 gün"
+        "E": "BOTAŞ Yönetim Kurulu"
       },
       "cevap": "B"
     },
@@ -35,7 +35,7 @@
         "B": "%15",
         "C": "%20",
         "D": "%25",
-        "E": "%5"
+        "E": "Hiçbiri"
       },
       "cevap": "A"
     },
@@ -48,7 +48,7 @@
         "B": "LPG ve CNG",
         "C": "LNG veya CNG",
         "D": "Odun ve kömür",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "İl Özel İdaresi"
       },
       "cevap": "C"
     },
@@ -61,7 +61,7 @@
         "B": "Doğrudan satışı",
         "C": "Depolama",
         "D": "Hiçbiri",
-        "E": "Mevzuatta belirtilmemiştir"
+        "E": "İl Özel İdaresi"
       },
       "cevap": "B"
     },
@@ -74,7 +74,7 @@
         "B": "Yalnızca BOTAŞ'a",
         "C": "Kendi personeline veya denetim şirketlerine",
         "D": "Üniversitelere",
-        "E": "Belediye Encümeni"
+        "E": "Hiçbiri"
       },
       "cevap": "C"
     },
@@ -87,7 +87,7 @@
         "B": "İki",
         "C": "Beş",
         "D": "Sınır yoktur",
-        "E": "Mevzuatta belirtilmemiştir"
+        "E": "Danıştay"
       },
       "cevap": "B"
     },
@@ -100,7 +100,7 @@
         "B": "Sanayi Odaları",
         "C": "Kurul (EPDK)",
         "D": "Belediye Encümeni",
-        "E": "Ulaştırma ve Altyapı Bakanlığı"
+        "E": "Hepsi"
       },
       "cevap": "C"
     },
@@ -113,7 +113,7 @@
         "B": "10 yıl içinde deplase edilirse maliyetini üstlenme",
         "C": "Vergi muafiyeti sağlama",
         "D": "Şirkete ek süre verme",
-        "E": "45 gün"
+        "E": "Rekabet Kurumu"
       },
       "cevap": "B"
     },
@@ -139,7 +139,7 @@
         "B": "Kurul (EPDK)",
         "C": "Maliye Bakanlığı",
         "D": "İthalatçı Şirket",
-        "E": "Sanayi ve Teknoloji Bakanlığı"
+        "E": "İçişleri Bakanlığı"
       },
       "cevap": "B"
     },
@@ -152,7 +152,7 @@
         "B": "Depolama Tarifesi",
         "C": "Bağlantı Tarifesi",
         "D": "Toptan Satış Fiyatı",
-        "E": "Mevzuatta belirtilmemiştir"
+        "E": "Rekabet Kurumu"
       },
       "cevap": "A"
     },
@@ -165,7 +165,7 @@
         "B": "Ticari öncelik yapılacağı",
         "C": "Cinsiyet ayrımı",
         "D": "Hız önceliği",
-        "E": "Mevzuatta belirtilmemiştir"
+        "E": "Cumhurbaşkanlığı"
       },
       "cevap": "A"
     },
@@ -178,7 +178,7 @@
         "B": "Nama yazılı",
         "C": "Halka açık",
         "D": "Karma",
-        "E": "Mevzuatta belirtilmemiştir"
+        "E": "Yargıtay"
       },
       "cevap": "B"
     },
@@ -191,7 +191,7 @@
         "B": "Tüketici",
         "C": "Kurum",
         "D": "BOTAŞ",
-        "E": "İl Özel İdaresi"
+        "E": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı"
       },
       "cevap": "B"
     },
@@ -204,7 +204,7 @@
         "B": "Hazine",
         "C": "Kurum (EPDK)",
         "D": "Yeni şirket",
-        "E": "Sanayi ve Teknoloji Bakanlığı"
+        "E": "Türkiye Büyük Millet Meclisi (TBMM)"
       },
       "cevap": "C"
     },
@@ -217,7 +217,7 @@
         "B": "BOTAŞ'a",
         "C": "Sertifika sahibi diğer şirketlere",
         "D": "Güvenlik güçlerine",
-        "E": "Sanayi ve Teknoloji Bakanlığı"
+        "E": "Türkiye Cumhuriyet Merkez Bankası"
       },
       "cevap": "C"
     },
@@ -230,7 +230,7 @@
         "B": "Abonelerin memnuniyeti ve hizmet kalitesi",
         "C": "Şirketin döviz rezervi",
         "D": "Banka kredileri durumu",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Cumhurbaşkanlığı Kararnamesi"
       },
       "cevap": "B"
     },
@@ -243,7 +243,7 @@
         "B": "Sadece 10 milyon metreküp üzeri ise",
         "C": "Hayır, serbest tüketici sayılamazlar",
         "D": "Sadece kış aylarında",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "Türkiye Cumhuriyet Merkez Bankası"
       },
       "cevap": "A"
     },
@@ -256,7 +256,7 @@
         "B": "Yeni baştan ihale açılır",
         "C": "Valiliğe devredilir",
         "D": "Şebeke sökülür",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Türkiye Cumhuriyet Merkez Bankası"
       },
       "cevap": "B"
     },
@@ -269,7 +269,7 @@
         "B": "Sadece Kurum onaylı bedeller harici ad altında ücret yansıtılamaz",
         "C": "Sınırsız danışmanlık ücreti adıyla alabilirler",
         "D": "Belediye izniyle ek aidat eklenebilir",
-        "E": "Sanayi ve Teknoloji Bakanlığı"
+        "E": "Cumhurbaşkanlığı"
       },
       "cevap": "B"
     },
@@ -282,7 +282,7 @@
         "B": "Elektrik perakende satışı yapabilir",
         "C": "Ana faaliyeti dışında, sadece bir başka piyasa faaliyeti yapan şirkete iştirak edebilir",
         "D": "Türkiye'deki her türlü şirkete ortaklık edebilir",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "BOTAŞ Yönetim Kurulu"
       },
       "cevap": "C"
     },
@@ -295,7 +295,7 @@
         "B": "Hayır, yoktur",
         "C": "Sadece yaz aylarında zorunludur",
         "D": "Eğer BOTAŞ onaylarsa",
-        "E": "Belediye Encümeni"
+        "E": "İl Özel İdaresi"
       },
       "cevap": "B"
     },
@@ -308,7 +308,7 @@
         "B": "Kısmi olarak yansıtılır",
         "C": "Sadece sanayi müşterilerine yansıtılır",
         "D": "Her zaman yansıtılır",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı"
       },
       "cevap": "A"
     },
@@ -321,7 +321,7 @@
         "B": "Belediye Fen İşleri",
         "C": "Dağıtım Şirketi",
         "D": "Bankalar",
-        "E": "Ulaştırma ve Altyapı Bakanlığı"
+        "E": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı"
       },
       "cevap": "C"
     },
@@ -334,7 +334,7 @@
         "B": "Çapraz sübvansiyon yapılması",
         "C": "Eşit taraflar arasında ayrım yapılmaması",
         "D": "Şeffaflık",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Türkiye Büyük Millet Meclisi (TBMM)"
       },
       "cevap": "B"
     },
@@ -347,7 +347,7 @@
         "B": "İlgili taraflar arasında serbestçe",
         "C": "İletim şirketi katsayısı ile",
         "D": "Tüketici Hakem Heyetince",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Hiçbiri"
       },
       "cevap": "B"
     },
@@ -360,7 +360,7 @@
         "B": "Valilik",
         "C": "Kurul (EPDK)",
         "D": "Şirketin kendisi",
-        "E": "Belediye Encümeni"
+        "E": "Rekabet Kurumu"
       },
       "cevap": "C"
     },
@@ -373,7 +373,7 @@
         "B": "9155 kcal, m3 ve kWh",
         "C": "10000 kcal, Joule",
         "D": "4000 kcal, litre",
-        "E": "Mevzuatta belirtilmemiştir"
+        "E": "Hepsi"
       },
       "cevap": "B"
     },
@@ -386,7 +386,7 @@
         "B": "Yİ-ÜFE ve/veya TÜFE",
         "C": "Dolar ve Euro Kuru",
         "D": "Türkiye Cumhuriyet Merkez Bankası Faiz Oranı",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Hazine ve Maliye Bakanlığı"
       },
       "cevap": "B"
     },
@@ -399,7 +399,7 @@
         "B": "Serbestçe pazarlık yapılır",
         "C": "Şirketin o anki isteğine bağlı tarifeler",
         "D": "Abonenin gelirine göre farklı tarifeler",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Rekabet Kurumu"
       },
       "cevap": "A"
     },
@@ -412,7 +412,7 @@
         "B": "Aracılık hizmeti verenleri",
         "C": "Üretim şirketlerini",
         "D": "Dağıtım kontrol şirketlerini",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Yargıtay"
       },
       "cevap": "C"
     },
@@ -425,7 +425,7 @@
         "B": "Birim hizmet ve amortisman bedelleri",
         "C": "Temsil, ağırlama ve lüks tüketim masrafları",
         "D": "Tüketici cezaları",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "İl Özel İdaresi"
       },
       "cevap": "B"
     },
@@ -438,7 +438,7 @@
         "B": "Hiçbir zaman maliyet olarak yansıtılamazlar",
         "C": "Sadece %50'sini yansıtabilirler",
         "D": "Kurul onay verirse yansıtabilirler",
-        "E": "%30"
+        "E": "İl Özel İdaresi"
       },
       "cevap": "B"
     },
@@ -451,7 +451,7 @@
         "B": "Şirkete ithalat yasağı getirmek",
         "C": "Tarifeleri resen (kendiliğinden) belirlemek",
         "D": "Lisansı iptal etmek",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Danıştay"
       },
       "cevap": "C"
     },
@@ -464,7 +464,7 @@
         "B": "Şirket Yönetim Kurulu",
         "C": "İletim Şirketi",
         "D": "Belediye",
-        "E": "Rekabet Kurumu"
+        "E": "Türkiye Büyük Millet Meclisi (TBMM)"
       },
       "cevap": "A"
     },
@@ -477,7 +477,7 @@
         "B": "Faturada tamamen ayrı kalemler olarak",
         "C": "Hiç göstermeden",
         "D": "İskonto gibi göstererek",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Hiçbiri"
       },
       "cevap": "B"
     },
@@ -490,7 +490,7 @@
         "B": "Birim gaz alım fiyatı, sistem kullanım bedeli ve ilgili vergilerden",
         "C": "Toptan satış fiyatının iki katından",
         "D": "Bağlantı bedeli ve güvence bedelinin toplamından",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Danıştay"
       },
       "cevap": "B"
     },
@@ -503,7 +503,7 @@
         "B": "Ticari özgürlük çerçevesinde yapabilir",
         "C": "Tüketici rızasıyla yapabilir",
         "D": "Aradaki mesafe bazında istenildiği gibi fiyatlama yapar",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Türkiye Cumhuriyet Merkez Bankası"
       },
       "cevap": "A"
     },
@@ -516,7 +516,7 @@
         "B": "Hatta verdikleri yük ve tüketim (çekiş) profillerine göre",
         "C": "Sadece müşteri statüsüne göre",
         "D": "Sayacın tipine göre tek tip bir bedel üzerinden",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "Türkiye Büyük Millet Meclisi (TBMM)"
       },
       "cevap": "B"
     },
@@ -529,7 +529,7 @@
         "B": "İletim hattı branşmanından",
         "C": "Basınç düşürme ve ölçüm istasyonu ile servis kutusu çıkışından",
         "D": "Sadece sayaç çıkışından",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "Türkiye Büyük Millet Meclisi (TBMM)"
       },
       "cevap": "C"
     },
@@ -542,7 +542,7 @@
         "B": "Sayaç hariç, doğal gaz tüketim cihazları, baca, atık gaz borusu ve mülkiyeti aboneye ait borular",
         "C": "Yalnızca ocak ve kombi cihazı",
         "D": "Sokak vanaları ve regülatörler",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "BOTAŞ Yönetim Kurulu"
       },
       "cevap": "B"
     },
@@ -555,7 +555,7 @@
         "B": "Müşteri tarafından seçilmiş yetkili bir sertifika sahibine",
         "C": "Belediye tarafından dışarıdan firmalara",
         "D": "Kurum tarafından belirlenen görevlilere",
-        "E": "Belediye Encümeni"
+        "E": "Hiçbiri"
       },
       "cevap": "B"
     },
@@ -568,7 +568,7 @@
         "B": "TSE, EN, ISO, IEC gibi kabul edilmiş uygun standartlar",
         "C": "Kullanılmış ancak sağlam görünen malzemeler",
         "D": "Sadece Tüketici Derneklerinin onayladıkları cihazlar",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "Türkiye Büyük Millet Meclisi (TBMM)"
       },
       "cevap": "B"
     },
@@ -581,7 +581,7 @@
         "B": "Daha ucuzsa alternatif olarak kullanılabilir",
         "C": "Şirket sözlü izin verirse kullanılabilir",
         "D": "Tüketici tüm riskleri yazılı alırsa kullanılabilir",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "BOTAŞ Yönetim Kurulu"
       },
       "cevap": "A"
     },
@@ -594,7 +594,7 @@
         "B": "Doğrudan bulunduğu sistemin (ilgili dağıtım veya iletim şirketinin) işletmecisi",
         "C": "Yerel Belediyenin itfaiye departmanı",
         "D": "Tüketici Hakem Heyeti",
-        "E": "Rekabet Kurumu"
+        "E": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı"
       },
       "cevap": "B"
     },
@@ -607,7 +607,7 @@
         "B": "Rastgele uzaktan sensörlerle",
         "C": "Kendi teknik personeli veya kendi adına çalışan akredite denetim kurumları ile",
         "D": "Sadece gözlem amacıyla dronelar ile",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "Rekabet Kurumu"
       },
       "cevap": "C"
     },
@@ -620,7 +620,7 @@
         "B": "Risk bedeli adı altında ekstra ceza keserek gaz vermek zorundadır",
         "C": "Müşterinin kusurlu eşyalarına doğrudan el koyar",
         "D": "Hiçbir şey yapamaz, mevzuata rağmen gazı açmak zorundadır",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "TSE"
       },
       "cevap": "A"
     },
@@ -633,7 +633,7 @@
         "B": "Tesisatı kurallara aykırı kullanan müşterinin kendisi",
         "C": "İç tesisatı projeye aykırı değiştiren yetkili firma/kişi",
         "D": "Tesisat onaysız olmasına rağmen müdahale eden usta",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Türkiye Cumhuriyet Merkez Bankası"
       },
       "cevap": "A"
     },
@@ -646,7 +646,7 @@
         "B": "Sistem yetkilisi Dağıtım veya İletim Şirketine",
         "C": "Ev cihazları üreticisine",
         "D": "Haber bültenlerine",
-        "E": "Sanayi ve Teknoloji Bakanlığı"
+        "E": "Türkiye Büyük Millet Meclisi (TBMM)"
       },
       "cevap": "B"
     },
@@ -659,7 +659,7 @@
         "B": "Değişikliği yetkili bir sertifika sahibine mutlaka projelendirtip onaylatmak",
         "C": "Herhangi bir ustaya yaptırıp doğrudan kullanmaya devam etmek",
         "D": "Dağıtım şirketine haber vermeden sadece vanayı kapatarak sökmek",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Hiçbiri"
       },
       "cevap": "B"
     },
@@ -672,7 +672,7 @@
         "B": "Sistemin işletmecisi konumundaki İletim şirketi (BOTAŞ) tarafından onaylanır",
         "C": "Belediye sınırlarında olduğu için Belediye Fen işleri onaylar",
         "D": "Müşteri kendi riskini üstlenerek onaylar",
-        "E": "Rekabet Kurumu"
+        "E": "Danıştay"
       },
       "cevap": "B"
     },
@@ -685,7 +685,7 @@
         "B": "Sadece aşırı soğuk kış günlerinde insaniyet namına verilir",
         "C": "Hayır, hiçbir şekilde ve koşulda onaylanmamış tesisata gaz verilemez",
         "D": "Ekstra yüksek güvence bedeli yansıtılarak deneme amaçlı verilir",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "TSE"
       },
       "cevap": "C"
     },
@@ -698,7 +698,7 @@
         "B": "İlgili İlçe Belediyeleri onayı ile",
         "C": "Sadece Kurum (EPDK) onayı ile",
         "D": "Makine Mühendisleri Odası onayı ile",
-        "E": "TSE"
+        "E": "Türkiye Cumhuriyet Merkez Bankası"
       },
       "cevap": "C"
     },
@@ -711,7 +711,7 @@
         "B": "Bulundukları ilin Ticaret Odası Özel İzni",
         "C": "Kurum veya Kurumun yetkilendirdiği kuruluştan alınmış geçerli bir 'Sertifika'",
         "D": "Belediyeden alınmış Ustalık ruhsatı",
-        "E": "Rekabet Kurumu"
+        "E": "Cumhurbaşkanlığı"
       },
       "cevap": "C"
     },
@@ -724,7 +724,7 @@
         "B": "Piyasadaki kuralları düzenlemek ve gerektiğinde sertifika iptali gibi yaptırımları uygulamak",
         "C": "Tesisatlar için kaynak elektrotlarını denetlemek",
         "D": "Doğrudan arıza ekiplerini yönetmek",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Türkiye Büyük Millet Meclisi (TBMM)"
       },
       "cevap": "B"
     },
@@ -737,7 +737,7 @@
         "B": "Dağıtım Şirketi müşterisi adına sorumludur",
         "C": "Tesisatı en son boyayan ustaya devredilir",
         "D": "Hiçbir sorumluluğu yoktur, tamamen devletin kusurudur",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "İçişleri Bakanlığı"
       },
       "cevap": "A"
     },
@@ -750,7 +750,7 @@
         "B": "Hayır, sorumluluğu kendisinde kalmak şartıyla kontrol yetkisini verebilir",
         "C": "Bu devir kesinlikle yasaktır, yapılamaz",
         "D": "Kuruldan yetki devri alarak sorumluktan kurtulur",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "Hazine ve Maliye Bakanlığı"
       },
       "cevap": "B"
     },
@@ -763,7 +763,7 @@
         "B": "Hayır, sayaç dağıtım şirketinin mülkiyetindedir ve iç tesisat haricidir",
         "C": "Acente sayaç satmışsa dahildir",
         "D": "Sadece faturalı sayaçlar dahildir, ön ödemeliler hariçtir",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "Rekabet Kurumu"
       },
       "cevap": "B"
     },
@@ -776,7 +776,7 @@
         "B": "Doğal gaz tesisatını yapan sertifikalı firmanın yetkili mühendisi ve dağıtım şirketi personeli beraber imza altına alır",
         "C": "Kaymakamlık onayı şartı vardır",
         "D": "Zabıta amirinin imzası yeterlidir",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "Cumhurbaşkanlığı"
       },
       "cevap": "B"
     },
@@ -789,7 +789,7 @@
         "B": "30 dakika",
         "C": "15 dakika",
         "D": "45 dakika",
-        "E": "Mevzuatta belirtilmemiştir"
+        "E": "İçişleri Bakanlığı"
       },
       "cevap": "C"
     },
@@ -802,7 +802,7 @@
         "B": "On taksit halinde tahsil edilebilir ancak sadece 1 defa alınır",
         "C": "Aylı faturaya sürekli yansıtılır",
         "D": "Yalnızca sözleşme yenilemelerinde",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "İçişleri Bakanlığı"
       },
       "cevap": "B"
     },
@@ -815,7 +815,7 @@
         "B": "En fazla 2 ayda bir okuyarak tahakkuk ettirebilir",
         "C": "3 ayda bir",
         "D": "Bu dönde yalnızca okuma bedeli yansıtır okumaz",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Hepsi"
       },
       "cevap": "B"
     },
@@ -828,7 +828,7 @@
         "B": "15 gün",
         "C": "30 gün",
         "D": "10 iş günü",
-        "E": "6 ay"
+        "E": "TSE"
       },
       "cevap": "D"
     },
@@ -841,7 +841,7 @@
         "B": "Dağıtım lisansı sahibi şirkete",
         "C": "Yerel Belediyeye",
         "D": "Enerji Bakanlığına",
-        "E": "İçişleri Bakanlığı"
+        "E": "Cumhurbaşkanlığı"
       },
       "cevap": "B"
     },
@@ -854,7 +854,7 @@
         "B": "Sadece on yılda bir zoraki olarak",
         "C": "Ancak müşteri arıza talebi bırakırsa onarılır, periodik yoktur",
         "D": "Sanayi Bakanlığı'nın 5 yılda bir muayenesinden sonra",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "Türkiye Büyük Millet Meclisi (TBMM)"
       },
       "cevap": "A"
     },
@@ -867,7 +867,7 @@
         "B": "6183 sayılı Amme Alacaklarının Tahsili Hakkındaki kanunda belirtilen gecikme zammı oranını aşamaz",
         "C": "Dağıtım şirketinin belirleyeceği serbest sınır",
         "D": "Kurum'un vereceği özel izin kadar",
-        "E": "İçişleri Bakanlığı"
+        "E": "Türkiye Cumhuriyet Merkez Bankası"
       },
       "cevap": "B"
     },
@@ -880,7 +880,7 @@
         "B": "En az 3 iş günü (72 saat) öncesinden",
         "C": "10 iş günü sonrası",
         "D": "Ay sonuna kadar bildirim verilmesi",
-        "E": "15 gün"
+        "E": "BOTAŞ Yönetim Kurulu"
       },
       "cevap": "B"
     },
@@ -893,7 +893,7 @@
         "B": "Hayır, müşteri talebi dışında hiçbir şekilde zorlamada bulunamaz",
         "C": "Eğer faturayı bir kez geciktirdiyse zorunlu yapar",
         "D": "Sadece yeni kurulan binalarda zorlayabilir",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "Cumhurbaşkanlığı"
       },
       "cevap": "B"
     },
@@ -906,7 +906,7 @@
         "B": "Sosyal durum gözetilerek asgari üç (3) fatura dönemi sonrasında",
         "C": "Hiçbir şekilde borçtan ötürü kesilmez, devlet karşılarmalı",
         "D": "Bir yıllık borç döngüsüne kadar kesilmez",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Cumhurbaşkanlığı"
       },
       "cevap": "B"
     },
@@ -919,7 +919,7 @@
         "B": "İmar Kanunu",
         "C": "Ölçüler ve Ayar Kanunu hükümleri uyarınca Sanayi Bakanlığı denetimi",
         "D": "Rekabetin Korunması Hakkında Kanun",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Türkiye Cumhuriyet Merkez Bankası"
       },
       "cevap": "C"
     },
@@ -932,7 +932,7 @@
         "B": "İkinci defa uyarıldığında",
         "C": "Israrla 3. defa (üç kez) usulsüzlük tespiti durumunda",
         "D": "Beşinci uyarısında",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Danıştay"
       },
       "cevap": "C"
     },
@@ -945,7 +945,7 @@
         "B": "Tatil günleri ve resmi tatillerin bir önceki yarım günlerinde (Arifelerde)",
         "C": "Ay ortasında",
         "D": "Pazartesi sendromu nedeniyle pazartesileri",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Cumhurbaşkanlığı Kararnamesi"
       },
       "cevap": "B"
     },
@@ -958,7 +958,7 @@
         "B": "Bildirimin hemen ertesi günü keser",
         "C": "60 gün bekleme süresinden sonra",
         "D": "Uyarı yapmadan faiz uygular",
-        "E": "6 ay"
+        "E": "Türkiye Büyük Millet Meclisi (TBMM)"
       },
       "cevap": "A"
     },
@@ -971,7 +971,7 @@
         "B": "15 iş günü içinde",
         "C": "6 aylık zamanaşımı süresince",
         "D": "Tebliğ tarihinden itibaren bir (1) yıl boyunca",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Danıştay"
       },
       "cevap": "D"
     },
@@ -984,7 +984,7 @@
         "B": "Hayır durdurmaz, müşteri vadesinde faturayı öder; itiraz haklı çıkarsa şirketten faiziyle iade veya mahsup alır",
         "C": "İtiraz süresince %50 borç tahsilatı dondurulur",
         "D": "Sadece mahkemeye verilirse durdurulur",
-        "E": "%30"
+        "E": "Türkiye Cumhuriyet Merkez Bankası"
       },
       "cevap": "B"
     },
@@ -997,7 +997,7 @@
         "B": "Tüketiciyi suçlayıp sözleşmesini derhal iptal eder",
         "C": "Geçmiş 1 yılı aşmamak kaydıyla, eksik kalan ayların ortalamasını çıkarıp, tüketiciye cezasız ve faizsiz taksitlendirme imkanı sunarak tahsil eder",
         "D": "Şirket hatası olduğu için eski bedelleri silip bedelsiz sayar",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "İçişleri Bakanlığı"
       },
       "cevap": "C"
     },
@@ -1010,7 +1010,7 @@
         "B": "15 gün (iş günü dahilinde hızlıca)",
         "C": "Aynı gün içinde veznede",
         "D": "60 gün",
-        "E": "1 yıl"
+        "E": "Hiçbiri"
       },
       "cevap": "B"
     },
@@ -1023,7 +1023,7 @@
         "B": "10 iş gününde",
         "C": "5 gün içinde acil itirazla",
         "D": "Herhangi bir zaman sınırlaması olmaksızın istediği zaman",
-        "E": "5 yıl"
+        "E": "Yargıtay"
       },
       "cevap": "A"
     },
@@ -1036,7 +1036,7 @@
         "B": "Her yıl sonu bir kereliğine",
         "C": "En az 3 ayda bir fiziki diskte yedekleri alınmalıdır",
         "D": "Kurum talep ettikçe yedeklenir",
-        "E": "Rekabet Kurumu"
+        "E": "BOTAŞ Yönetim Kurulu"
       },
       "cevap": "C"
     },
@@ -1049,7 +1049,7 @@
         "B": "Tespit edilen hacim bedelinin %200'ü (2 Katı) olarak cezai tahsilat yapılır",
         "C": "3 Katı hesaplanır",
         "D": "Asgari asgari ücretin 10 katı standart kesilir",
-        "E": "%5"
+        "E": "Hazine ve Maliye Bakanlığı"
       },
       "cevap": "B"
     },
@@ -1062,7 +1062,7 @@
         "B": "İlk çeyreğin (Nisan) sonuna kadar her işletme dönemi",
         "C": "Yenileme için Eylül ayı sonunda",
         "D": "Kesin kuralı yoktur, talep oldukça",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Yargıtay"
       },
       "cevap": "A"
     },
@@ -1075,7 +1075,7 @@
         "B": "Kokulandırma (Odorizasyon)",
         "C": "Süzme / Tozdan arındırma",
         "D": "Gazın süpürülmesi",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı"
       },
       "cevap": "B"
     },
@@ -1088,7 +1088,7 @@
         "B": "İlk 50 bin abone için en az iki adet ve ilave her 50 bin abone artışında bir adet tam teşekküllü araç şeklinde sayılara göre",
         "C": "Karşılaşılabilecek maksimum arıza tipine göre asgari on tane",
         "D": "Tüm acil birimler için ortak bir adet minibüs kafi gelir",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı"
       },
       "cevap": "B"
     },
@@ -1101,7 +1101,7 @@
         "B": "Kritik kurumların geçici ısınma veya yakıt/alternatif tüp ihtiyaçlarını sağlamak için gerekli tüm tedbirleri alıp destek sağlamak",
         "C": "Kendi sorumluluğunda olmadığını basına bir bildiriyle açıklamak",
         "D": "Derhal Valilikle beraber binayı tahliye etmek",
-        "E": "Rekabet Kurumu"
+        "E": "İçişleri Bakanlığı"
       },
       "cevap": "B"
     },
@@ -1114,7 +1114,7 @@
         "B": "Bildirim basında veya sms ile en az üç (3) gün önceden şeffafça yapılmalıdır",
         "C": "On gün önceden mühürlü mektup ile bildirmek zorundadır",
         "D": "Radyo yoluyla bir hafta önce verilmeli",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Hepsi"
       },
       "cevap": "B"
     },
@@ -1127,7 +1127,7 @@
         "B": "Doğrudan KVKK izni gerektirmediği için kaydedilmez, dinlenilmez",
         "C": "Tüm ses kayıtları güvenli sunucularda 1 yıl süreyle operasyonel, toplam asgari kanuni süreler kadar yedekli arşiv saklanır",
         "D": "Anında silinir",
-        "E": "5 yıl"
+        "E": "BOTAŞ Yönetim Kurulu"
       },
       "cevap": "C"
     },
@@ -1140,7 +1140,7 @@
         "B": "En geç 3 iş günü içinde müşteri hizmetleri veya dijital kanaldan okunan tüketimi iletmelidir",
         "C": "On gün boyunca süre verilir",
         "D": "Hiç bildirmese de faturasına kıyasen aylık fatura yansıtılır",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Cumhurbaşkanlığı"
       },
       "cevap": "B"
     },
@@ -1153,7 +1153,7 @@
         "B": "İşlem masrafı için çift depozito teminatı istenir",
         "C": "Eski güvence bedeli, hak mağduriyeti olmamak adına sözleşme üzerine yeni isme aktarılarak varise nakledilir; ilave veya yeni bir güvence bedeli istenme işlemi uygulanamaz",
         "D": "Devir işlemi kesinlikle yapılmaz, sayacın sökülüp yeni proje çizilmesi sağlanır",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Cumhurbaşkanlığı Kararnamesi"
       },
       "cevap": "C"
     },
@@ -1166,7 +1166,7 @@
         "B": "Merkezi yönetim kapsamındaki Genel Bütçeli Kamu İdareleri, İbadethane olarak tescili Diyanetçe verilmiş Camiler, Mescitler veya resmi dini kurum binaları",
         "C": "Devletin desteklediği sanayi Odaları",
         "D": "Özel İlk ve Orta Öğretim Okulları ve yurtlar",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Hiçbiri"
       },
       "cevap": "B"
     },
@@ -1179,7 +1179,7 @@
         "B": "SCADA ile Sevkiyat Kontrol Merkezi",
         "C": "Acil Dağıtım Kontrol Paneli Şefliği",
         "D": "Sinyalizasyon Merkezi",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Yargıtay"
       },
       "cevap": "B"
     },
@@ -1192,7 +1192,7 @@
         "B": "Sınırsızdır, tüketici kartının kapasitesi kadar gaz alır",
         "C": "Kesin bir yıllık tüm miktar indirim bitmeden verilebilir",
         "D": "Tüm müşterilere standart asgari kullanım kotası (500 M3) sabittir",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "İl Özel İdaresi"
       },
       "cevap": "A"
     },
@@ -1205,7 +1205,7 @@
         "B": "Güvenlik onayları sonrası 24 saati geçmeden en kısa sürede gaz güvenli verilir",
         "C": "Bir hafta bekleme cezasına girer",
         "D": "48 saatlik sistem denetimi biter bitmez",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Cumhurbaşkanlığı"
       },
       "cevap": "B"
     },
@@ -1218,7 +1218,7 @@
         "B": "Dağıtım şirketi o dönemde okunduğu halde asgari hacme gelmemiş tüketimi erteleyip o dönem faturalandırmama veya diğer aya devretme hakkına sahiptir",
         "C": "Tüketimi eksik kullandığı için ek güvence bedeli faturası tahakkuk ettirilir",
         "D": "Uzun süre tüketmediği için sözleşmesi haber verilmeden feshedilir",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Hiçbiri"
       },
       "cevap": "B"
     },
@@ -1231,7 +1231,7 @@
         "B": "Yasal emniyet/Adli kurum zorunluluğu, hukuki talep veya müşterinin kendi ıslak imzalı/yazılı açık muvafakati (izni) dışında üçüncü şahıs şirketler ile kesinlikle paylaşılamaz",
         "C": "Kurum içi sadece pazarlama araştırmaları için anonim aktarımı serbestiyet taşır, müşteri buna imza atmıştır",
         "D": "İnternet altyapı hizmeti satan komşu iştirakçi şirketlere kolaylık için devredilebilir",
-        "E": "İçişleri Bakanlığı"
+        "E": "Türkiye Cumhuriyet Merkez Bankası"
       },
       "cevap": "B"
     },
@@ -1244,7 +1244,7 @@
         "B": "Nitelikli Hırsızlık",
         "C": "Kanuna Saygısızlık İşlemi",
         "D": "Kaçak gaz hırsızlığı olarak polise sevk",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "İçişleri Bakanlığı"
       },
       "cevap": "A"
     },
@@ -1257,7 +1257,7 @@
         "B": "Gaz arzı başlanan tarih itibariyle yasal bakım/işletme bütünlüğü adına tamamıyla dağıtım şirketine bila bedel (bedelsiz) devredilir mülkiyeti geçer ve şirketin resmi şebekesine kaydedilir",
         "C": "Kamu Hazinesine Kiralama yöntemi uygulanır",
         "D": "Sanayi Bakanlığına irat kaydedilir",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı"
       },
       "cevap": "B"
     },
@@ -1270,7 +1270,7 @@
         "B": "Her aboneye hediye edilecek ilk gaz bedeli oranı",
         "C": "Birim hizmet ve amortisman bedeli rakamı üzerinden eksiltme yoluyla",
         "D": "Şirketin sermaye gücüne göre ihalenin kazanıldığı bir sistem",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "BOTAŞ Yönetim Kurulu"
       },
       "cevap": "C"
     },
@@ -1283,7 +1283,7 @@
         "B": "Asla hiçbir manevi veya maddi talep edemez",
         "C": "Sadece kurum onayıyla bir üst paket abonesi hakkı kazanır",
         "D": "Ödenen tüm fatura %200 geri ödenmek suretiyle iptal edilir",
-        "E": "%5"
+        "E": "Hiçbiri"
       },
       "cevap": "A"
     },
@@ -1296,7 +1296,7 @@
         "B": "Hayati kuruluşlar ile sanayi aboneleri arasında yapılan kademeli müdahale ve kesinti programı sırası",
         "C": "Tüm çalışanlara bu kriz günlerinde ekstra tehlike primi ödeme politikası",
         "D": "Arıza giderildikten sonra gaz kesintisi yapılmış bölgelerin yeniden şebekeye adım adım devreye alınması prosedürü",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Rekabet Kurumu"
       },
       "cevap": "C"
     },
@@ -1309,7 +1309,7 @@
         "B": "Sadece Yi-ÜFE",
         "C": "Mevduat Faizi",
         "D": "Büyüme Oranı",
-        "E": "Duruma göre kısmen uygulanır"
+        "E": "TÜFE ve/veya Yi-ÜFE"
       },
       "cevap": "E"
     },
@@ -1322,7 +1322,7 @@
         "B": "9100 kcal/m3",
         "C": "9155 kcal/m3",
         "D": "10000 kcal/m3",
-        "E": "Mevzuatta belirtilmemiştir"
+        "E": "4000 kcal/m3"
       },
       "cevap": "C"
     },
@@ -1335,7 +1335,7 @@
         "B": "Maliyet unsuru olarak yer almaz (yansıtılmaz)",
         "C": "Sadece sanayiye yansıtılır",
         "D": "Geçmiş yıl kârından düşülür",
-        "E": "%20"
+        "E": "Devlet destekli geri ödenir"
       },
       "cevap": "B"
     },
@@ -1348,7 +1348,7 @@
         "B": "Aylık asgari",
         "C": "Günlük azami doğal gaz miktarı",
         "D": "Saatlik minimum",
-        "E": "Mevzuatta belirtilmemiştir"
+        "E": "Anlık çekim pikleri"
       },
       "cevap": "C"
     },
@@ -1361,7 +1361,7 @@
         "B": "Eşit taraflar arası ayrım yapılmaması",
         "C": "Çapraz sübvansiyon yapılamaması",
         "D": "Siyasi partilere özel fiyat uygulanması",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Mali açıdan sürdürülebilirlik"
       },
       "cevap": "D"
     },
@@ -1374,7 +1374,7 @@
         "B": "Valilik",
         "C": "Dağıtım Şirketi CEOu",
         "D": "Kurul (EPDK)",
-        "E": "Ulaştırma ve Altyapı Bakanlığı"
+        "E": "İletim Şirketi"
       },
       "cevap": "D"
     },
@@ -1387,7 +1387,7 @@
         "B": "Kurul",
         "C": "Şirket Yönetimi",
         "D": "Cumhurbaşkanı",
-        "E": "TSE"
+        "E": "Rekabet Kurumu"
       },
       "cevap": "B"
     },
@@ -1400,7 +1400,7 @@
         "B": "Verimlilik hedefi",
         "C": "Kapasite sınırı",
         "D": "TÜFE",
-        "E": "Mevzuatta belirtilmemiştir"
+        "E": "Amortisman payı"
       },
       "cevap": "B"
     },
@@ -1413,7 +1413,7 @@
         "B": "Çelik Hat",
         "C": "İç Tesisat",
         "D": "İletim Kanalı",
-        "E": "Mevzuatta belirtilmemiştir"
+        "E": "Taşıma Hattı"
       },
       "cevap": "C"
     },
@@ -1426,7 +1426,7 @@
         "B": "Belediye çalışanlarına",
         "C": "Kuruldan (Sertifika Yönetmeliğine göre) Sertifika Sahibi olanlara",
         "D": "Tesisat ustalık belgesi olan herkese",
-        "E": "TSE"
+        "E": "Herhangi bir mühendise"
       },
       "cevap": "C"
     },
@@ -1439,7 +1439,7 @@
         "B": "Değişiklik sertifika sahibine projelendirilir ve dağıtım şirketine onaylatılır.",
         "C": "Zabıtadan izin alınır.",
         "D": "İtfaiyeden destek alınır.",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Yönetici onayı kafidir."
       },
       "cevap": "B"
     },
@@ -1452,7 +1452,7 @@
         "B": "Zabıta çağırıp eve el koyar.",
         "C": "Gaz verilmesini reddedebilir (uygun bulunana kadar keser/vermez).",
         "D": "Umursamadan gazı açar.",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Cezasıyla birlikte gaz verir."
       },
       "cevap": "C"
     },
@@ -1465,7 +1465,7 @@
         "B": "Dağıtım Şirketi",
         "C": "Belediye Başkanı",
         "D": "İletim Şirketi",
-        "E": "Ulaştırma ve Altyapı Bakanlığı"
+        "E": "Müşterinin (Abone) bizzat kendisi"
       },
       "cevap": "E"
     },
@@ -1478,7 +1478,7 @@
         "B": "Kesinlikle kullanılamaz.",
         "C": "Kısmen kullanılabilir.",
         "D": "İnşaat mühendisi izniyle kullanılabilir.",
-        "E": "Yukarıdakilerin hepsi"
+        "E": "Sadece bacalarda esneklik vardır."
       },
       "cevap": "B"
     },
@@ -1491,7 +1491,7 @@
         "B": "Dağıtım şirketi kusurlu bulunur.",
         "C": "Kurum kusurlu bulunur.",
         "D": "Zarar ve ziyandan Dağıtım/İletim şirketleri sorumlu edilemez.",
-        "E": "TSE"
+        "E": "Tamamen şirket tazmin eder."
       },
       "cevap": "D"
     }

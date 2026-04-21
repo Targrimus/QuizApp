@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Row, Col, Table, Badge, Nav, ProgressBar } from 'react-bootstrap';
+import { Card, Row, Col, Table, Badge, Nav, ProgressBar, OverlayTrigger, Tooltip as BsTooltip } from 'react-bootstrap';
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Legend
 } from 'recharts';
 import api from '../services/api';
+
+const ModernIcons = {
+  Total: (props) => <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" {...props}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>,
+  AvgScore: (props) => <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" {...props}><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>,
+  Pass: (props) => <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" {...props}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>,
+  Fail: (props) => <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" {...props}><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>,
+  Perfect: (props) => <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" {...props}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>,
+  Cheat: (props) => <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" {...props}><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+};
 
 const GRADE_COLORS = {
   AA:'#1a7431', BA:'#155724', BB:'#0c5460',
@@ -88,43 +97,55 @@ function AnalyticsTab() {
       {/* ══════════════════ GENEL BAKIŞ ══════════════════ */}
       {activeSection === 'overview' && (
         <div>
+          <div className="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+            <div>
+              <h3 className="text-dark fw-bold mb-1">Genel Kurum Özeti</h3>
+              <p className="text-muted mb-0">Kurumdaki tüm personelin genel başarı istatistikleri ve platform özeti.</p>
+            </div>
+          </div>
           <Row className="mb-4 g-3">
-            <Col md={3}>
-              <Card className="text-center shadow-sm border-0 h-100" style={{ background: 'linear-gradient(135deg,#0d6efd,#0a58ca)', color: '#fff' }}>
-                <Card.Body className="py-4">
-                  <div style={{ fontSize: '2.5rem' }}>🗂️</div>
-                  <h2 className="display-5 fw-bold mb-0">{basicStats.totalTests}</h2>
-                  <p className="mb-0 opacity-75">Toplam Çözülen Sınav</p>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={3}>
-              <Card className="text-center shadow-sm border-0 h-100" style={{ background: 'linear-gradient(135deg,#20c997,#0ca678)', color: '#fff' }}>
-                <Card.Body className="py-4">
-                  <div style={{ fontSize: '2.5rem' }}>📊</div>
-                  <h2 className="display-5 fw-bold mb-0">{basicStats.averageScore}</h2>
-                  <p className="mb-0 opacity-75">Kurum Ortalama Puanı</p>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={3}>
-              <Card className="text-center shadow-sm border-0 h-100" style={{ background: 'linear-gradient(135deg,#198754,#146c43)', color: '#fff' }}>
-                <Card.Body className="py-4">
-                  <div style={{ fontSize: '2.5rem' }}>✅</div>
-                  <h2 className="display-5 fw-bold mb-0">{basicStats.passedCount}</h2>
-                  <p className="mb-0 opacity-75">Başarılı (60 ve üzeri)</p>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={3}>
-              <Card className="text-center shadow-sm border-0 h-100" style={{ background: 'linear-gradient(135deg,#dc3545,#b02a37)', color: '#fff' }}>
-                <Card.Body className="py-4">
-                  <div style={{ fontSize: '2.5rem' }}>❌</div>
-                  <h2 className="display-5 fw-bold mb-0">{basicStats.failedCount}</h2>
-                  <p className="mb-0 opacity-75">Başarısız</p>
-                </Card.Body>
-              </Card>
-            </Col>
+            {[
+              { id: 'total', title: 'Sınav Sayısı', value: basicStats.totalTests || 0, icon: ModernIcons.Total, bg: 'linear-gradient(135deg, #0d6efd, #0a58ca)', tip: 'Platformda tamamlanan tüm geçerli ve geçersiz sınavların toplamı' },
+              { id: 'avg', title: 'Ort. Başarı', value: basicStats.averageScore || 0, icon: ModernIcons.AvgScore, bg: 'linear-gradient(135deg, #20c997, #0ca678)', tip: 'Tüm sınav sonuçlarının ortalama yüzdelik başarı puanı' },
+              { id: 'pass', title: 'Başarılı', value: basicStats.passedCount || 0, icon: ModernIcons.Pass, bg: 'linear-gradient(135deg, #198754, #146c43)', tip: 'Geçme puanı olan 60 ve üzerinde not alan sınav sayısı' },
+              { id: 'fail', title: 'Başarısız', value: basicStats.failedCount || 0, icon: ModernIcons.Fail, bg: 'linear-gradient(135deg, #dc3545, #b02a37)', tip: 'Geçme puanının altında kalarak başarısız olan sınav sayısı' },
+              { id: 'perfect', title: '100 Tam Puan', value: basicStats.perfectScoreCount || 0, icon: ModernIcons.Perfect, bg: 'linear-gradient(135deg, #ffc107, #e0a800)', text: 'text-dark', tip: 'Tüm soruları doğru yanıtlayarak 100 tam puan alan sınav sayısı' },
+              { id: 'cheat', title: 'İhlal Edilen', value: basicStats.cheaterCount || 0, icon: ModernIcons.Cheat, bg: 'linear-gradient(135deg, #6c757d, #495057)', tip: 'Sınav ekranından ayrılarak veya kuralları ihlal ederek iptal edilen sınavlar' }
+            ].map(stat => (
+              <Col xs={12} sm={6} lg={4} xl={2} key={stat.id}>
+                <OverlayTrigger 
+                  placement="top" 
+                  overlay={
+                    <BsTooltip id={`tip-${stat.id}`} className="shadow">
+                      <div className="text-start px-1 py-1">
+                        <div className="d-flex align-items-center gap-2 mb-2 pb-1 border-bottom border-light border-opacity-25">
+                          <span className="d-flex opacity-75"><stat.icon width={16} height={16} /></span>
+                          <strong style={{fontSize: '0.85rem', letterSpacing: '0.5px'}}>{stat.title}</strong>
+                        </div>
+                        <div style={{fontSize: '0.8rem', lineHeight: '1.4', opacity: 0.9}}>{stat.tip}</div>
+                      </div>
+                    </BsTooltip>
+                  }
+                >
+                  <Card 
+                    className={`shadow-sm border-0 h-100 ${stat.text || 'text-white'}`} 
+                    style={{ backgroundImage: stat.bg, transition: 'transform 0.2s, box-shadow 0.2s', cursor: 'pointer', borderRadius: '12px' }} 
+                    onMouseEnter={e => {e.currentTarget.style.transform='translateY(-5px)'; e.currentTarget.style.boxShadow='0 .5rem 1rem rgba(0,0,0,.15)'}} 
+                    onMouseLeave={e => {e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='0 .125rem .25rem rgba(0,0,0,.075)'}}
+                  >
+                    <Card.Body className="p-3 d-flex flex-column justify-content-between position-relative z-1">
+                      <div className="d-flex align-items-center gap-2 mb-3">
+                        <div className="opacity-75" style={{transform: 'scale(1.0)'}}><stat.icon /></div>
+                        <h6 className="mb-0 fw-bold text-uppercase" style={{fontSize: '0.75rem', letterSpacing: '0.5px', opacity: 0.9}}>{stat.title}</h6>
+                      </div>
+                      <div>
+                        <h3 className="display-5 fw-bold mb-0">{stat.value}</h3>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </OverlayTrigger>
+              </Col>
+            ))}
           </Row>
 
           <Row className="g-3 mb-4">

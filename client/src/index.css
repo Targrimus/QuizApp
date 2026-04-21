@@ -21,7 +21,7 @@ body {
 
 /* Glassmorphism Cards */
 .card, .glass-card {
-  background: var(--glass-bg) !important;
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border) !important;

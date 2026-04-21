@@ -285,6 +285,20 @@ app.get('/api/admin/results', authMiddleware, adminMiddleware, async (req, res) 
   }
 });
 
+// Admin: Bulk Remove Tests
+app.post('/api/admin/remove-tests-bulk', authMiddleware, adminMiddleware, async (req, res) => {
+  try {
+    const { ids } = req.body;
+    if (!Array.isArray(ids) || ids.length === 0) {
+      return res.status(400).json({ error: 'Geçersiz ID listesi' });
+    }
+    await TestAssignment.deleteMany({ _id: { $in: ids } });
+    res.json({ message: `${ids.length} adet sınav başarıyla silindi.` });
+  } catch (err) {
+    res.status(500).json({ error: 'Toplu silme sırasında sunucu hatası.' });
+  }
+});
+
 // Admin: Remove Test
 app.delete('/api/admin/remove-test/:id', authMiddleware, adminMiddleware, async (req, res) => {
   try {
@@ -312,6 +326,40 @@ app.get('/api/admin/test/:id', authMiddleware, adminMiddleware, async (req, res)
   }
 });
 
+// Admin: Get Exam Batches (Sınav Oturumları)
+app.get('/api/admin/assigned-batches', authMiddleware, adminMiddleware, async (req, res) => {
+  try {
+    const batches = await TestAssignment.aggregate([
+      {
+        $lookup: {
+          from: 'users',
+          localField: 'personel',
+          foreignField: '_id',
+          as: 'personelInfo'
+        }
+      },
+      { $unwind: { path: '$personelInfo', preserveNullAndEmptyArrays: true } },
+      {
+        $group: {
+          _id: "$expiresAt", // expiresAt is computed exactly once per bulk assignment, making it a perfect batch identifier
+          createdAt: { $first: "$createdAt" },
+          targetCount: { $sum: 1 },
+          completedCount: { $sum: { $cond: ["$isCompleted", 1, 0] } },
+          totalScore: { $sum: { $cond: ["$isCompleted", "$score", 0] } },
+          expiresAt: { $first: "$expiresAt" },
+          birimler: { $addToSet: "$personelInfo.birim" },
+          gorevler: { $addToSet: "$personelInfo.gorev" },
+        }
+      },
+      { $sort: { createdAt: -1 } }
+    ]);
+    res.json(batches);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error parsing batches' });
+  }
+});
+
 // Admin: Get Analytics Data
 app.get('/api/admin/analytics', authMiddleware, adminMiddleware, async (req, res) => {
   try {
@@ -324,6 +372,8 @@ app.get('/api/admin/analytics', authMiddleware, adminMiddleware, async (req, res
       averageScore: completedTests.length ? Math.round(completedTests.reduce((acc, t) => acc + t.score, 0) / completedTests.length) : 0,
       passedCount: completedTests.filter(t => t.score >= 60).length,
       failedCount: completedTests.filter(t => t.score < 60).length,
+      perfectScoreCount: completedTests.filter(t => t.score === 100).length,
+      cheaterCount: completedTests.filter(t => t.terminationReason && t.terminationReason.includes('Kopya')).length,
     };
 
     // ── SORU İSTATİSTİKLERİ ──
@@ -494,8 +544,11 @@ app.get('/api/test/:id', async (req, res) => {
 // User: Submit Test - NO AUTH REQUIRED
 app.post('/api/test/:id/submit', async (req, res) => {
   try {
-    const { answers } = req.body; 
+    const { answers, terminationReason } = req.body; 
     const test = await TestAssignment.findOne({ _id: req.params.id }).populate('questions');
+    
+    // IP adresini yakala (proxy/lokal durumlar için fallbackli)
+    const userIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'Bilinmeyen IP';
     
     if (!test) return res.status(404).json({ error: 'Sınav bulunamadı' });
     if (test.isCompleted) return res.status(400).json({ error: 'Sınav zaten daha önceden tamamlanmış.' });
@@ -530,6 +583,10 @@ app.post('/api/test/:id/submit', async (req, res) => {
     test.letterGrade = gradeInfo.letter;
     test.completedAt = new Date();
     test.isCompleted = true;
+    test.ipAddress = userIp;
+    if (terminationReason) {
+      test.terminationReason = terminationReason;
+    }
     
     await test.save();
     res.json({ message: 'Test submitted', score: test.score, letterGrade: gradeInfo.letter, label: gradeInfo.label });

@@ -25,13 +25,12 @@ const seedDatabase = async () => {
       const rawData = fs.readFileSync(questionsPath, 'utf8');
       const jsonData = JSON.parse(rawData);
       const sorular = jsonData.sorular;
-      const cevaplar = jsonData.cevaplar;
-
       const questionsToInsert = sorular.map((q) => ({
         id: q.id,
         soru: q.soru,
         secenekler: q.secenekler,
-        cevap: cevaplar[q.id.toString()]
+        cevap: q.cevap,
+        grup: q.mevzuat_basligi || "Genel"
       }));
 
       await Question.insertMany(questionsToInsert);

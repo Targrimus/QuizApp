@@ -36,37 +36,59 @@ function AdminTestDetails() {
       <Card className="shadow-sm mb-4 border-0">
         <Card.Body className="bg-light rounded">
           <div className="d-flex justify-content-between align-items-start flex-wrap gap-3">
-            <div>
+            <div className="flex-grow-1">
               <h4 className="mb-1">{test.personel?.ad} {test.personel?.soyad}</h4>
               <p className="text-muted mb-1">{test.personel?.birim} / {test.personel?.gorev} (Sicil: {test.personel?.sicil})</p>
               {test.completedAt && (
-                <small className="text-muted">
-                  🕐 Tamamlanma: <strong>{new Date(test.completedAt).toLocaleString('tr-TR')}</strong>
-                </small>
+                <div className="text-muted mt-2">
+                  <div className="mb-1">🕐 Tamamlanma: <strong>{new Date(test.completedAt).toLocaleString('tr-TR')}</strong></div>
+                  
+                  {test.ipAddress && (
+                    <div className="mb-1">🌐 IP Adresi: <strong>{test.ipAddress}</strong></div>
+                  )}
+
+                  {test.terminationReason && test.terminationReason.includes('Kopya') ? (
+                     <Alert variant="danger" className="d-inline-flex px-3 py-1 mt-2 mb-0 border-0 fw-bold shadow-sm">
+                       <span className="me-2">🚨</span> {test.terminationReason}
+                     </Alert>
+                  ) : test.terminationReason ? (
+                     <Alert variant="warning" className="d-inline-flex px-3 py-1 mt-2 mb-0 border-0 fw-bold shadow-sm">
+                       <span>⚠️</span> {test.terminationReason}
+                     </Alert>
+                  ) : (
+                     <Alert variant="success" className="d-inline-flex px-3 py-1 mt-2 mb-0 border-0 fw-bold shadow-sm">
+                       Normal Sınav Bitişi
+                     </Alert>
+                  )}
+                </div>
               )}
             </div>
-            <div className="text-end">
-              {/* Score */}
-              <h1 className={passed ? "text-success mb-1" : "text-danger mb-1"} style={{fontSize:'3rem', fontWeight:900}}>
-                {test.score}
-              </h1>
-              {/* Letter Grade */}
-              {test.letterGrade && (() => {
-                const gradeColors = {AA:'#1a7431',BA:'#155724',BB:'#0c5460',CB:'#004085',CC:'#856404',DC:'#856404',DD:'#721c24',FF:'#721c24'};
-                const gradeBgs = {AA:'#d4edda',BA:'#c3e6cb',BB:'#d1ecf1',CB:'#cce5ff',CC:'#fff3cd',DC:'#fff3cd',DD:'#f8d7da',FF:'#f5c6cb'};
-                const gradeLabels = {AA:'Pekiyi',BA:'İyi-Pekiyi',BB:'İyi',CB:'Orta-İyi',CC:'Orta',DC:'Geçer-Orta',DD:'Geçer',FF:'Başarısız'};
-                return (
-                  <div className="d-flex align-items-center justify-content-end gap-2 mb-1">
-                    <span style={{fontWeight:900,fontSize:'1.8rem',color:gradeColors[test.letterGrade]||'#333',background:gradeBgs[test.letterGrade]||'#f8f9fa',borderRadius:'10px',padding:'2px 14px'}}>
+            <div className="text-end d-flex align-items-center gap-4">
+              <div className="text-center">
+                <span className="text-secondary text-uppercase fw-bold" style={{ fontSize: '0.75rem', letterSpacing: '1px' }}>Sınav Puanı</span>
+                <div style={{ fontSize: '3.5rem', fontWeight: 300, color: passed ? '#212529' : '#dc3545', lineHeight: '1' }}>
+                  {test.score}
+                </div>
+              </div>
+              
+              <div style={{ width: '1px', background: '#dee2e6', height: '60px' }}></div>
+              
+              <div className="text-center">
+                <span className="text-secondary text-uppercase fw-bold" style={{ fontSize: '0.75rem', letterSpacing: '1px' }}>Harf Notu</span>
+                {test.letterGrade ? (
+                  <div>
+                    <span style={{ fontSize: '2.5rem', fontWeight: 'bold', color: passed ? '#0d6efd' : '#dc3545', lineHeight: '1' }}>
                       {test.letterGrade}
                     </span>
-                    <span className="text-muted fw-semibold">{gradeLabels[test.letterGrade]||''}</span>
                   </div>
-                );
-              })()}
-              <h5>
-                {passed ? <Badge bg="success">✅ BAŞARILI</Badge> : <Badge bg="danger">❌ BAŞARISIZ</Badge>}
-              </h5>
+                ) : <div className="text-muted">—</div>}
+              </div>
+
+              <div className="ms-3 text-start">
+                <h5 className="mb-0">
+                  {passed ? <Badge bg="success" className="px-3 py-2 shadow-sm rounded-pill">✅ BAŞARILI</Badge> : <Badge bg="danger" className="px-3 py-2 shadow-sm rounded-pill">❌ BAŞARISIZ</Badge>}
+                </h5>
+              </div>
             </div>
           </div>
         </Card.Body>

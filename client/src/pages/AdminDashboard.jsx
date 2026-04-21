@@ -5,6 +5,15 @@ import { toast } from 'react-toastify';
 import api from '../services/api';
 import AnalyticsTab from '../components/AnalyticsTab';
 
+const Icons = {
+  Assign: <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>,
+  Results: <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>,
+  Analytics: <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>,
+  Batches: <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M12 2l9 4.9V17L12 22l-9-4.9V7z"/><path d="M12 22L12 12"/><path d="M12 12l9-4.9"/><path d="M12 12L3 7.1"/></svg>,
+  Menu: <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>,
+  Logo: <svg width="24" height="24" fill="none" stroke="#ffc107" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+};
+
 // Alfabe listesi - şık harfleri için
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
@@ -243,9 +252,11 @@ function QuestionModal({ show, onHide, groups, onSaved, editingQuestion }) {
 // Ana AdminDashboard bileşeni
 // ============================================================
 function AdminDashboard() {
-  const [activeTab, setActiveTab] = useState('assign');
+  const [activeTab, setActiveTab] = useState(localStorage.getItem('adminActiveTab') || 'assign');
   const [users, setUsers] = useState([]);
   const [results, setResults] = useState([]);
+  const [selectedResultIds, setSelectedResultIds] = useState([]);
+  const [batches, setBatches] = useState([]);
   const [allQuestions, setAllQuestions] = useState([]);
   const [groups, setGroups] = useState([]);
 
@@ -261,11 +272,23 @@ function AdminDashboard() {
   const [userSelectionMode, setUserSelectionMode] = useState('filter');
   const [selectedUserIds, setSelectedUserIds] = useState([]);
 
+  // Sidebar toggle state
+  const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > 768);
+
   // Modal state
   const [showQuestionModal, setShowQuestionModal] = useState(false);
-  const [editingQuestion, setEditingQuestion] = useState(null); // null → ekleme, obje → düzenleme
+  const [editingQuestion, setEditingQuestion] = useState(null);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) setIsSidebarOpen(false);
+      else setIsSidebarOpen(true);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleLogout = () => {
     localStorage.clear();
@@ -301,11 +324,19 @@ function AdminDashboard() {
     } catch (err) { console.error(err); }
   };
 
+  const fetchBatches = async () => {
+    try {
+      const res = await api.get('/admin/assigned-batches');
+      setBatches(res.data);
+    } catch (err) { console.error(err); }
+  };
+
   useEffect(() => {
     fetchUsers();
     fetchResults();
     fetchQuestions();
     fetchGroups();
+    fetchBatches();
   }, []);
 
   const handleQuestionToggle = (qId) => {
@@ -340,8 +371,9 @@ function AdminDashboard() {
       const res = await api.post('/admin/assign-test', payload);
       toast.success(res.data.message);
       fetchResults();
+      fetchBatches();
       setSelectedQuestionIds([]);
-      setActiveTab('results');
+      setActiveTab('batches');
     } catch (err) {
       toast.error(err.response?.data?.error || 'Test atama başarısız.');
     }
@@ -355,6 +387,33 @@ function AdminDashboard() {
       toast.success(res.data.message || 'Sınav silindi.');
     } catch (err) {
       toast.error('Sınav silinirken bir hata oluştu');
+    }
+  };
+
+  const handleResultToggle = (id) => {
+    setSelectedResultIds(prev =>
+      prev.includes(id) ? prev.filter(resId => resId !== id) : [...prev, id]
+    );
+  };
+
+  const handleSelectAllResults = () => {
+    if (selectedResultIds.length === results.length && results.length > 0) {
+      setSelectedResultIds([]);
+    } else {
+      setSelectedResultIds(results.map(r => r._id));
+    }
+  };
+
+  const handleBulkDeleteResults = async () => {
+    if (selectedResultIds.length === 0) return;
+    if (!window.confirm(`Seçili ${selectedResultIds.length} adet sınav kaydını kalıcı olarak silmek istediğinize emin misiniz?`)) return;
+    try {
+      const res = await api.post('/admin/remove-tests-bulk', { ids: selectedResultIds });
+      fetchResults();
+      setSelectedResultIds([]);
+      toast.success(res.data.message || 'Seçili sınavlar silindi.');
+    } catch (err) {
+      toast.error('Toplu silme işleminde bir hata oluştu.');
     }
   };
 
@@ -398,43 +457,86 @@ function AdminDashboard() {
   return (
     <div className="d-flex" style={{ height: '100vh', overflow: 'hidden' }}>
       {/* Sidebar */}
-      <div className="bg-primary text-white d-flex flex-column shadow-lg" style={{ width: '280px', flexShrink: 0 }}>
-        <div className="p-4 border-bottom border-light border-opacity-25 pb-3">
-          <h2 className="mb-0 fw-bold d-flex align-items-center">
-            <span style={{ color: '#ffc107', marginRight: '10px' }}>⚡</span> AksaQuiz
-          </h2>
-          <small className="opacity-75">Yönetici Paneli</small>
+      <div 
+        className="bg-white d-flex flex-column border-end shadow-sm" 
+        style={{ 
+          width: isSidebarOpen ? '280px' : '88px', 
+          flexShrink: 0, 
+          transition: 'width 0.3s ease',
+          overflow: 'hidden',
+          whiteSpace: 'nowrap',
+          zIndex: 10
+        }}
+      >
+        <div className="p-4 border-bottom pb-4 text-center">
+          <h3 className="mb-1 fw-bold d-flex align-items-center justify-content-center text-primary">
+            <span style={{ marginRight: isSidebarOpen ? '10px' : '0px' }}>{Icons.Logo}</span> 
+            {isSidebarOpen && <span className="text-dark">AksaQuiz</span>}
+          </h3>
+          {isSidebarOpen && <small className="text-muted fw-semibold" style={{letterSpacing: '1px', fontSize: '0.75rem'}}>YÖNETİCİ PANELİ</small>}
         </div>
 
         <ul className="nav nav-pills flex-column mb-auto p-3 gap-2">
           {[
-            { key: 'assign', icon: '📋', label: 'Sınav Ata / Planla' },
-            { key: 'results', icon: '📊', label: 'Sınav Sonuçları' },
-            { key: 'questions', icon: '📚', label: 'Soru Havuzu Yönetimi' },
-            { key: 'analytics', icon: '📈', label: 'İstatistik & Analiz' },
+            { key: 'assign', icon: Icons.Assign, label: 'Sınav Ata / Planla' },
+            { key: 'batches', icon: Icons.Batches, label: 'Sınav Oturumları' },
+            { key: 'results', icon: Icons.Results, label: 'Ayrıntılı Sonuçlar' },
+            { key: 'questions', icon: Icons.Questions, label: 'Soru Havuzu Yönetimi' },
+            { key: 'analytics', icon: Icons.Analytics, label: 'İstatistik & Analiz' },
           ].map(item => (
             <li key={item.key} className="nav-item">
               <a
                 href="#"
-                className={`nav-link border-0 text-start py-3 ${activeTab === item.key ? 'active bg-white text-primary shadow-sm fw-bold rounded-3' : 'text-white opacity-75'}`}
-                onClick={(e) => { e.preventDefault(); setActiveTab(item.key); }}
+                className={`nav-link border-0 d-flex align-items-center py-3 px-3 mb-1 ${activeTab === item.key ? 'active bg-primary bg-opacity-10 text-primary fw-bold shadow-sm' : 'text-secondary hover-bg-light'} rounded-3`}
+                onClick={(e) => { 
+                  e.preventDefault(); 
+                  setActiveTab(item.key); 
+                  localStorage.setItem('adminActiveTab', item.key);
+                  if(window.innerWidth <= 768) setIsSidebarOpen(false); 
+                }}
+                style={{ transition: 'all 0.2s ease', justifyContent: isSidebarOpen ? 'flex-start' : 'center' }}
+                title={!isSidebarOpen ? item.label : ''}
               >
-                <span className="me-2">{item.icon}</span> {item.label}
+                <span className={isSidebarOpen ? "me-3" : "mx-auto"}>{item.icon}</span> 
+                {isSidebarOpen && <span className="flex-grow-1">{item.label}</span>}
               </a>
             </li>
           ))}
         </ul>
 
-        <div className="p-3 border-top border-light border-opacity-25">
-          <Button variant="outline-light" className="w-100 py-2 fw-bold" onClick={handleLogout}>
-            Çıkış Yap
+        <div className="p-4 border-top">
+          <Button 
+            variant="outline-danger" 
+            className="w-100 py-2 fw-bold d-flex align-items-center justify-content-center" 
+            onClick={handleLogout}
+            title={!isSidebarOpen ? 'Çıkış Yap' : ''}
+          >
+            <span className={isSidebarOpen ? "me-2" : "mx-auto"}>
+              <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            </span>
+            {isSidebarOpen && <span>Çıkış Yap</span>}
           </Button>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="flex-grow-1 bg-light pb-5" style={{ overflowY: 'auto' }}>
-        <div className="p-4 px-5">
+      {/* Main Content Area */}
+      <div className="flex-grow-1 bg-light d-flex flex-column" style={{ overflow: 'hidden' }}>
+        
+        {/* Toggle Header Menu */}
+        <div className="bg-white p-3 border-bottom d-flex align-items-center shadow-sm">
+          <Button 
+            variant="light" 
+            className="p-2 border-0 d-flex align-items-center justify-content-center text-primary" 
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            style={{ borderRadius: '8px' }}
+          >
+            {Icons.Menu}
+          </Button>
+          <span className="ms-3 fw-bold text-secondary fs-5">Aksa Doğalgaz | Sınav Yönetim Sistemi</span>
+        </div>
+
+        {/* Scrollable Page Body */}
+        <div className="p-4 px-md-5 pb-5" style={{ overflowY: 'auto', flexGrow: 1 }}>
 
           {/* ── SINAV ATA ── */}
           {activeTab === 'assign' && (
@@ -468,8 +570,8 @@ function AdminDashboard() {
                         <>
                           <Col md={6}>
                             <Form.Group>
-                              <Form.Label className="fw-semibold">Birim</Form.Label>
-                              <Form.Select className="form-select-lg border bg-light" value={filterBirim} onChange={e => setFilterBirim(e.target.value)}>
+                              <Form.Label className="fw-semibold text-secondary">Birim Filtresi</Form.Label>
+                              <Form.Select className="form-select-lg border-0 bg-light shadow-none rounded-3" value={filterBirim} onChange={e => setFilterBirim(e.target.value)}>
                                 <option value="">Tüm Kurum Personeli</option>
                                 {uniqueBirimler.map((b, i) => <option key={i} value={b}>{b}</option>)}
                               </Form.Select>
@@ -477,8 +579,8 @@ function AdminDashboard() {
                           </Col>
                           <Col md={6}>
                             <Form.Group>
-                              <Form.Label className="fw-semibold">Görev</Form.Label>
-                              <Form.Select className="form-select-lg border bg-light" value={filterGorev} onChange={e => setFilterGorev(e.target.value)}>
+                              <Form.Label className="fw-semibold text-secondary">Görev Filtresi</Form.Label>
+                              <Form.Select className="form-select-lg border-0 bg-light shadow-none rounded-3" value={filterGorev} onChange={e => setFilterGorev(e.target.value)}>
                                 <option value="">Tüm Unvanlar</option>
                                 {uniqueGorevler.map((g, i) => <option key={i} value={g}>{g}</option>)}
                               </Form.Select>
@@ -489,16 +591,24 @@ function AdminDashboard() {
 
                       {userSelectionMode === 'manual' && (
                         <Col md={12}>
-                          <div className="border rounded p-3 bg-white shadow-sm" style={{ maxHeight: '200px', overflowY: 'auto' }}>
-                            <h6 className="mb-3 text-secondary text-uppercase fw-bold">
-                              Personel Listesi ({selectedUserIds.length} seçildi)
+                          <div className="border rounded p-3 bg-white shadow-sm" style={{ maxHeight: '300px', overflowY: 'auto' }}>
+                            <h6 className="mb-3 text-secondary text-uppercase fw-bold d-flex justify-content-between align-items-center">
+                              <span>Personel Listesi ({users.length})</span>
+                              <Badge bg="primary" pill>{selectedUserIds.length} Seçildi</Badge>
                             </h6>
                             {users.map(u => (
-                              <div key={u._id} className="d-flex align-items-center p-2 mb-1 border-bottom">
+                              <div 
+                                key={u._id} 
+                                className="d-flex align-items-center p-2 mb-1 border-bottom rounded" 
+                                style={{ cursor: 'pointer', transition: 'background-color 0.2s', backgroundColor: selectedUserIds.includes(u._id) ? '#e9ecef' : 'transparent' }}
+                                onClick={() => handleUserToggle(u._id)}
+                              >
                                 <Form.Check type="checkbox" id={`u-${u._id}`}
                                   checked={selectedUserIds.includes(u._id)}
-                                  onChange={() => handleUserToggle(u._id)}
-                                  className="me-3" />
+                                  onChange={() => {}}
+                                  className="me-3" 
+                                  style={{ pointerEvents: 'none' }}
+                                />
                                 <div>
                                   <Badge bg="info" className="me-2">{u.sicil || '—'}</Badge>
                                   <span className="fw-bold me-2">{u.ad} {u.soyad}</span>
@@ -510,10 +620,10 @@ function AdminDashboard() {
                         </Col>
                       )}
 
-                      <Col md={12} className="mt-3">
+                      <Col md={12} className="mt-4">
                         <Form.Group>
-                          <Form.Label className="fw-semibold">Sınav Geçerlilik Süresi (Saat)</Form.Label>
-                          <Form.Control className="form-control-lg border bg-light w-25" type="number"
+                          <Form.Label className="fw-semibold text-secondary">Sınav Geçerlilik Süresi (Saat)</Form.Label>
+                          <Form.Control className="form-control-lg border-0 bg-light shadow-none rounded-3 w-25" type="number"
                             value={hoursToExpire} onChange={e => setHoursToExpire(e.target.value)} min="1" max="72" required />
                         </Form.Group>
                       </Col>
@@ -539,16 +649,16 @@ function AdminDashboard() {
                       <Row className="mb-4">
                         <Col md={3}>
                           <Form.Group>
-                            <Form.Label className="fw-semibold">Soru Adedi</Form.Label>
-                            <Form.Control className="form-control-lg border-0 bg-light" type="number"
+                            <Form.Label className="fw-semibold text-secondary">Soru Adedi</Form.Label>
+                            <Form.Control className="form-control-lg border-0 bg-light shadow-none rounded-3" type="number"
                               value={questionCount} onChange={e => setQuestionCount(e.target.value)} min="1" required />
                           </Form.Group>
                         </Col>
                         {selectionMode === 'group' && (
                           <Col md={9}>
                             <Form.Group>
-                              <Form.Label className="fw-semibold">Hedef Grup</Form.Label>
-                              <Form.Select className="form-select-lg border-primary border-2 bg-light"
+                              <Form.Label className="fw-semibold text-secondary">Hedef Soru Grubu</Form.Label>
+                              <Form.Select className="form-select-lg border-0 bg-primary bg-opacity-10 text-primary shadow-none rounded-3"
                                 value={selectedGroup} onChange={e => setSelectedGroup(e.target.value)}>
                                 {groups.map((g, i) => <option key={i} value={g}>{g}</option>)}
                               </Form.Select>
@@ -564,11 +674,18 @@ function AdminDashboard() {
                           Soru Havuzu ({selectedQuestionIds.length} seçili)
                         </h6>
                         {allQuestions.map((q, idx) => (
-                          <div key={q._id} className="d-flex align-items-start mb-2 p-2 border-bottom">
+                          <div 
+                            key={q._id} 
+                            className="d-flex align-items-start mb-2 p-2 border-bottom rounded"
+                            style={{ cursor: 'pointer', transition: 'background-color 0.2s', backgroundColor: selectedQuestionIds.includes(q._id) ? '#e9ecef' : 'transparent' }}
+                            onClick={() => handleQuestionToggle(q._id)}
+                          >
                             <div className="me-3 mt-1">
                               <Form.Check type="checkbox" id={`q-${q._id}`}
                                 checked={selectedQuestionIds.includes(q._id)}
-                                onChange={() => handleQuestionToggle(q._id)} />
+                                onChange={() => {}} 
+                                style={{ pointerEvents: 'none' }}
+                              />
                             </div>
                             <div>
                               <Badge bg="secondary" className="me-2">{q.grup}</Badge>
@@ -590,26 +707,108 @@ function AdminDashboard() {
             </div>
           )}
 
+           {/* ── SINAV OTURUMLARI (BATCHES) ── */}
+          {activeTab === 'batches' && (
+            <div>
+              <h3 className="mb-4 text-dark fw-bold border-bottom pb-2">Toplu Sınav Oturumları</h3>
+              <p className="text-muted mb-4">Sisteme atanan tüm toplu sınav oturumları (grupları), hedef kitle ve ortalama başarı analizleri burada listelenir.</p>
+              
+              <Card className="shadow-sm border-0 rounded-4 overflow-hidden">
+                <Card.Body className="p-0">
+                  <Table responsive hover className="align-middle mb-0 border-white">
+                    <thead className="bg-light text-secondary" style={{ borderBottom: '2px solid #e9ecef' }}>
+                      <tr>
+                        <th className="px-4 py-3 fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Oluşturma Tarihi</th>
+                        <th className="py-3 fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Hedef Kitle Özeti</th>
+                        <th className="py-3 text-center fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Katılımcı Sayısı</th>
+                        <th className="py-3 text-center fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Tamamlanma</th>
+                        <th className="px-4 py-3 text-center fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Ortalama Puan</th>
+                      </tr>
+                    </thead>
+                    <tbody className="border-top-0">
+                      {batches.map((batch, index) => {
+                        const ortalama = batch.completedCount ? Math.round(batch.totalScore / batch.completedCount) : 0;
+                        const isExpired = new Date() > new Date(batch.expiresAt);
+                        return (
+                          <tr key={index}>
+                            <td className="px-4">
+                              <div className="fw-bold">{new Date(batch.createdAt).toLocaleDateString('tr-TR')}</div>
+                              <small className="text-muted">{new Date(batch.createdAt).toLocaleTimeString('tr-TR', {hour:'2-digit',minute:'2-digit'})}</small>
+                            </td>
+                            <td>
+                              <div className="d-flex flex-wrap gap-1">
+                                {batch.birimler.map(b => b ? <Badge bg="primary" key={b} style={{fontSize: '0.75rem'}}>{b}</Badge> : null)}
+                                {batch.gorevler.map(g => g ? <Badge bg="secondary" key={g} style={{fontSize: '0.75rem'}}>{g}</Badge> : null)}
+                              </div>
+                            </td>
+                            <td className="text-center fw-bold fs-5 text-dark">
+                              {batch.targetCount} <span style={{fontSize:'0.8rem'}} className="text-muted fw-normal">kişi</span>
+                            </td>
+                            <td className="text-center">
+                              {batch.completedCount >= batch.targetCount ? (
+                                <Badge bg="success" pill>Tümü Tamamlandı</Badge>
+                              ) : isExpired ? (
+                                <Badge bg="danger" pill>Süre Doldu ({batch.completedCount}/{batch.targetCount})</Badge>
+                              ) : (
+                                <div className="text-warning fw-bold">{batch.completedCount} / {batch.targetCount}</div>
+                              )}
+                            </td>
+                            <td className="px-4 text-center">
+                              {batch.completedCount > 0 ? (
+                                <span className="fs-4 fw-bold" style={{color: ortalama >= 60 ? '#198754' : '#dc3545'}}>{ortalama}</span>
+                              ) : <span className="text-muted">—</span>}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                      {batches.length === 0 && (
+                        <tr><td colSpan="5" className="text-center py-5 text-muted">Henüz atanan bir sınav oturumu bulunmamaktadır.</td></tr>
+                      )}
+                    </tbody>
+                  </Table>
+                </Card.Body>
+              </Card>
+            </div>
+          )}
+
           {/* ── SINAV SONUÇLARI ── */}
           {activeTab === 'results' && (
             <div>
               <h3 className="mb-4 text-dark fw-bold border-bottom pb-2">Sınav Sonuçları</h3>
-              <Card className="shadow-sm border-0 rounded-4">
+              
+              {selectedResultIds.length > 0 && (
+                <div className="mb-3 p-3 bg-danger bg-opacity-10 border border-danger border-opacity-25 rounded-3 d-flex justify-content-between align-items-center shadow-sm">
+                  <span className="text-danger fw-bold">🗑️ {selectedResultIds.length} Sınav Kaydı Seçildi</span>
+                  <Button variant="danger" className="fw-bold px-4 shadow-sm" onClick={handleBulkDeleteResults}>
+                    Seçili Olanları Sil
+                  </Button>
+                </div>
+              )}
+
+              <Card className="shadow-sm border-0 rounded-4 overflow-hidden">
                 <Card.Body className="p-0">
-                  <Table hover responsive className="align-middle mb-0">
-                    <thead className="table-light">
+                  <Table responsive hover className="align-middle mb-0 border-white">
+                    <thead className="bg-light text-secondary" style={{ borderBottom: '2px solid #e9ecef' }}>
                       <tr>
-                        <th className="px-4 py-3">Atama Tarihi</th>
-                        <th className="py-3">Personel</th>
-                        <th className="py-3">Birim / Görev</th>
-                        <th className="py-3">Durum</th>
-                        <th className="py-3 text-center">Puan</th>
-                        <th className="py-3 text-center">Harf Notu</th>
-                        <th className="py-3">Tamamlanma</th>
-                        <th className="px-4 py-3 text-end">İşlem</th>
+                        <th className="px-4 py-3 fw-semibold border-0" style={{ width: '40px' }}>
+                          <Form.Check 
+                            type="checkbox" 
+                            checked={results.length > 0 && selectedResultIds.length === results.length}
+                            onChange={handleSelectAllResults}
+                          />
+                        </th>
+                        <th className="py-3 fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Atama Tarihi</th>
+                        <th className="py-3 fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Personel</th>
+                        <th className="py-3 fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Birim / Görev</th>
+                        <th className="py-3 fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Durum</th>
+                        <th className="py-3 text-center fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Puan</th>
+                        <th className="py-3 text-center fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Harf Notu</th>
+                        <th className="py-3 fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Tamamlanma</th>
+                        <th className="py-3 fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Durum (Neden) & IP</th>
+                        <th className="px-4 py-3 text-end fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>İşlem</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="border-top-0">
                       {results.map(res => {
                         const isExpired = new Date() > new Date(res.expiresAt);
                         const passed = res.score >= 60;
@@ -624,8 +823,15 @@ function AdminDashboard() {
                           DD:'#f8d7da',FF:'#f5c6cb'
                         };
                         return (
-                          <tr key={res._id}>
+                          <tr key={res._id} style={{ backgroundColor: selectedResultIds.includes(res._id) ? 'rgba(220, 53, 69, 0.05)' : 'transparent', transition: 'background-color 0.2s' }}>
                             <td className="px-4">
+                              <Form.Check 
+                                type="checkbox" 
+                                checked={selectedResultIds.includes(res._id)}
+                                onChange={() => handleResultToggle(res._id)}
+                              />
+                            </td>
+                            <td className="py-3">
                               <div>{new Date(res.createdAt).toLocaleDateString('tr-TR')}</div>
                               <small className="text-muted">{new Date(res.createdAt).toLocaleTimeString('tr-TR', {hour:'2-digit',minute:'2-digit'})}</small>
                             </td>
@@ -664,6 +870,19 @@ function AdminDashboard() {
                                   </div>
                                 : <span className="text-muted">—</span>}
                             </td>
+                            <td>
+                              {res.terminationReason && res.terminationReason.includes('Kopya') ? (
+                                <Badge bg="danger" className="mb-1 d-block"><span className="me-1">🚨</span>{res.terminationReason}</Badge>
+                              ) : res.terminationReason ? (
+                                <Badge bg="warning" text="dark" className="mb-1 d-block">{res.terminationReason}</Badge>
+                              ) : res.isCompleted ? (
+                                <Badge bg="success" className="mb-1 d-block">Normal Bitiş</Badge>
+                              ) : <span className="text-muted">—</span>}
+                              
+                              {res.ipAddress && (
+                                <small className="text-muted d-block mt-1">IP: {res.ipAddress}</small>
+                              )}
+                            </td>
                             <td className="px-4 text-end">
                               <div className="d-flex gap-2 justify-content-end">
                                 {res.isCompleted && (
@@ -701,20 +920,20 @@ function AdminDashboard() {
                 </Button>
               </div>
 
-              <Card className="shadow-sm border-0 rounded-4">
+              <Card className="shadow-sm border-0 rounded-4 overflow-hidden">
                 <Card.Body className="p-0">
-                  <Table hover responsive className="align-middle mb-0">
-                    <thead className="table-light">
+                  <Table responsive hover className="align-middle mb-0 border-white">
+                    <thead className="bg-light text-secondary" style={{ borderBottom: '2px solid #e9ecef' }}>
                       <tr>
-                        <th className="px-4 py-3" style={{ width: '70px' }}>ID</th>
-                        <th className="py-3" style={{ width: '180px' }}>Grup</th>
-                        <th className="py-3">Soru Metni</th>
-                        <th className="py-3 text-center" style={{ width: '100px' }}>Cevap</th>
-                        <th className="py-3 text-center" style={{ width: '80px' }}>Şık</th>
-                        <th className="px-4 py-3 text-end" style={{ width: '140px' }}>İşlem</th>
+                        <th className="px-4 py-3 fw-semibold border-0 text-uppercase" style={{ width: '70px', fontSize:'0.8rem', letterSpacing:'0.5px' }}>ID</th>
+                        <th className="py-3 fw-semibold border-0 text-uppercase" style={{ width: '180px', fontSize:'0.8rem', letterSpacing:'0.5px' }}>Grup</th>
+                        <th className="py-3 fw-semibold border-0 text-uppercase" style={{fontSize:'0.8rem', letterSpacing:'0.5px'}}>Soru Metni</th>
+                        <th className="py-3 text-center fw-semibold border-0 text-uppercase" style={{ width: '100px', fontSize:'0.8rem', letterSpacing:'0.5px' }}>Cevap</th>
+                        <th className="py-3 text-center fw-semibold border-0 text-uppercase" style={{ width: '80px', fontSize:'0.8rem', letterSpacing:'0.5px' }}>Şık</th>
+                        <th className="px-4 py-3 text-end fw-semibold border-0 text-uppercase" style={{ width: '140px', fontSize:'0.8rem', letterSpacing:'0.5px' }}>İşlem</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="border-top-0">
                       {allQuestions.map(q => {
                         const entryCount = getSecenekEntries(q.secenekler).length;
                         return (
@@ -774,6 +993,99 @@ function AdminDashboard() {
         onSaved={handleModalSaved}
         editingQuestion={editingQuestion}
       />
+      {/* Right Sidebar (Cart / Selection Manager) */}
+      <div 
+        className="bg-white border-start d-flex flex-column shadow-sm"
+        style={{
+          width: activeTab === 'assign' ? '340px' : '0px',
+          flexShrink: 0,
+          transition: 'width 0.3s ease',
+          overflow: 'hidden'
+        }}
+      >
+        <div className="p-4 border-bottom bg-primary bg-opacity-10 text-primary d-flex align-items-center gap-2">
+          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <h5 className="mb-0 fw-bold">Sınav Atanacaklar</h5>
+        </div>
+        
+        <div className="p-3 flex-grow-1" style={{ overflowY: 'auto' }}>
+          {userSelectionMode === 'manual' ? (
+            selectedUserIds.length === 0 ? (
+              <div className="text-muted text-center mt-5 p-3">
+                <span className="d-block mb-3" style={{fontSize: '3rem'}}>👈</span>
+                Listeden personel seçtiğinizde burada görünecektir.
+              </div>
+            ) : (
+              <div className="d-flex flex-column gap-2">
+                <div className="d-flex justify-content-between mb-2">
+                  <span className="fw-bold text-dark">Toplam Seçim:</span>
+                  <Badge bg="primary">{selectedUserIds.length} Kişi</Badge>
+                </div>
+                {users.filter(u => selectedUserIds.includes(u._id)).map((u, i) => (
+                  <div key={'rs-' + u._id} className="d-flex justify-content-between align-items-center p-2 bg-light border rounded">
+                    <div className="d-flex align-items-center" style={{minWidth: 0}}>
+                      <Badge bg="secondary" className="me-2 rounded-circle flex-shrink-0" style={{width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{i+1}</Badge>
+                      <div className="text-truncate">
+                        <div className="fw-bold text-truncate" style={{fontSize: '0.95rem'}}>{u.ad} {u.soyad}</div>
+                        <div className="text-muted text-truncate" style={{fontSize: '0.8rem'}}>{u.birim}</div>
+                      </div>
+                    </div>
+                    <Button variant="outline-danger" size="sm" className="rounded-circle p-1 d-flex align-items-center justify-content-center flex-shrink-0 ms-2" style={{width:'28px', height:'28px'}} onClick={() => handleUserToggle(u._id)} title="Listeden Çıkar">
+                      <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            )
+          ) : (
+            // FILTER MODE (Toplu Gönderim)
+            (() => {
+              const matched = users.filter(u => (!filterBirim || u.birim === filterBirim) && (!filterGorev || u.gorev === filterGorev));
+              if (matched.length === 0) {
+                return (
+                  <div className="text-muted text-center mt-5 p-3">
+                    <span className="d-block mb-3" style={{fontSize: '3rem'}}>⚠️</span>
+                    Şu anki filtrelere uyan personel bulunmuyor.
+                  </div>
+                );
+              }
+              const grouped = matched.reduce((acc, u) => {
+                const b = u.birim || 'Atanmamış Birim';
+                if (!acc[b]) acc[b] = [];
+                acc[b].push(u);
+                return acc;
+              }, {});
+
+              return (
+                <div className="d-flex flex-column gap-3">
+                  <div className="d-flex justify-content-between mb-1 pb-2 border-bottom">
+                    <span className="fw-bold text-dark">Eşleşen Hedef Kitle:</span>
+                    <Badge bg="success" className="fs-6 px-3">{matched.length} Kişi</Badge>
+                  </div>
+                  {Object.keys(grouped).sort().map(birim => (
+                     <div key={birim} className="mb-1">
+                       <div className="bg-secondary bg-opacity-10 text-secondary fw-bold px-2 py-1 rounded mb-2 text-uppercase d-flex justify-content-between align-items-center" style={{fontSize: '0.75rem', letterSpacing: '0.5px'}}>
+                         <span>{birim}</span>
+                         <Badge bg="secondary" pill>{grouped[birim].length}</Badge>
+                       </div>
+                       {grouped[birim].map((u, i) => (
+                          <div key={'f-' + u._id} className="d-flex align-items-center p-2 bg-light border rounded mb-1">
+                            <Badge bg="dark" bg-opacity-25 className="me-2 rounded-circle flex-shrink-0 text-white" style={{width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{i+1}</Badge>
+                            <div className="text-truncate">
+                              <div className="fw-bold text-truncate text-dark" style={{fontSize: '0.9rem'}}>{u.ad} {u.soyad}</div>
+                              <div className="text-muted text-truncate" style={{fontSize: '0.75rem'}}>{u.gorev || 'Unvansız'}</div>
+                            </div>
+                          </div>
+                       ))}
+                     </div>
+                  ))}
+                </div>
+              );
+            })()
+          )}
+        </div>
+      </div>
+
     </div>
   );
 }

@@ -8,7 +8,9 @@ const TestAssignmentSchema = new mongoose.Schema({
   score: { type: Number, default: 0 },
   letterGrade: { type: String, default: '' },
   completedAt: { type: Date, default: null },
-  answers: { type: Map, of: String }
+  answers: { type: Map, of: String },
+  ipAddress: { type: String, default: null },
+  terminationReason: { type: String, default: null }
 }, { timestamps: true });
 
 module.exports = mongoose.model("TestAssignment", TestAssignmentSchema);
